@@ -5,7 +5,7 @@
  	render(){
 
  		return(	 
- 			<div>SOAT</div>
+ 			<div>SOAT CNPX</div>
  		)
  	}
  }
