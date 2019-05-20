@@ -5,7 +5,7 @@
  	render(){
 
  		return(	 
- 			<div>Ahora sí</div>
+ 			<div>Ahora sí que sí</div>
  		)
  	}
  }
