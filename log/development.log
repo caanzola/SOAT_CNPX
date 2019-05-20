@@ -32,3 +32,12 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 77046ms (Views: 76937.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-05-20 00:36:59 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (57514.4ms)
+Completed 200 OK in 74371ms (Views: 74114.0ms | ActiveRecord: 0.0ms)
+
+
