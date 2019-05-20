@@ -5,7 +5,7 @@
  	render(){
 
  		return(	 
- 			<div>Por fin</div>
+ 			<div>SOAT</div>
  		)
  	}
  }
