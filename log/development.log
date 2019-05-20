@@ -123,3 +123,12 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-05-20 01:42:24 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (48662.0ms)
+Completed 200 OK in 54982ms (Views: 54968.2ms | ActiveRecord: 0.0ms)
+
+
