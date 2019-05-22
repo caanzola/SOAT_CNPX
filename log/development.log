@@ -2257,3 +2257,290 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 480ms (Views: 449.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-05-22 17:05:30 -0500
+  [1m[35m (50.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (28.1ms)
+Completed 200 OK in 96ms (Views: 72.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 17:22:11 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (0.7ms)
+Completed 200 OK in 61ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 17:22:24 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (0.5ms)
+Completed 200 OK in 8ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 17:23:48 -0500
+  [1m[35m (94.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb (66227.6ms)
+Completed 200 OK in 66331ms (Views: 66302.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 17:25:17 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (66.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 369ms (Views: 70.0ms | ActiveRecord: 227.8ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 17:25:24 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (179.9ms)
+Completed 200 OK in 212ms (Views: 183.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 17:25:39 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 17:27:57 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+[Webpacker] Compiling…
+Started GET "/" for ::1 at 2019-05-22 17:28:01 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb (42206.4ms)
+Completed 200 OK in 42213ms (Views: 42210.1ms | ActiveRecord: 0.0ms)
+
+
+  Rendered pages/index.html.erb (46811.4ms)
+Completed 200 OK in 46870ms (Views: 46816.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 17:28:52 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (53.6ms)
+Completed 200 OK in 130ms (Views: 97.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 17:31:48 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb (41134.5ms)
+Completed 200 OK in 41162ms (Views: 41138.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 17:33:39 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb (71815.0ms)
+Completed 200 OK in 71857ms (Views: 71821.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 17:36:39 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb (49374.0ms)
+Completed 200 OK in 49421ms (Views: 49379.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 17:38:00 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (46.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 59ms (Views: 9.2ms | ActiveRecord: 46.9ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 17:38:05 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+[Webpacker] Compiling…
+Started GET "/" for ::1 at 2019-05-22 17:38:09 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb (45582.5ms)
+  Rendered pages/index.html.erb (49932.2ms)
+Completed 200 OK in 45590ms (Views: 45586.1ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 50097ms (Views: 49937.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 17:39:58 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb (52929.6ms)
+Completed 200 OK in 53010ms (Views: 52935.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 17:41:14 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+[Webpacker] Compiling…
+Started GET "/" for ::1 at 2019-05-22 17:41:18 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb (81876.3ms)
+Completed 200 OK in 81955ms (Views: 81884.3ms | ActiveRecord: 0.0ms)
+
+
+  Rendered pages/index.html.erb (78224.0ms)
+Completed 200 OK in 78233ms (Views: 78228.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 17:49:01 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (39.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 51ms (Views: 8.3ms | ActiveRecord: 39.5ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 17:49:12 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+[Webpacker] Compiling…
+Started GET "/" for ::1 at 2019-05-22 17:49:16 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb (62545.7ms)
+Completed 200 OK in 62615ms (Views: 62553.8ms | ActiveRecord: 0.0ms)
+
+
+  Rendered pages/index.html.erb (58636.8ms)
+Completed 200 OK in 58649ms (Views: 58645.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 17:54:41 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+[Webpacker] Compiling…
+Started GET "/" for ::1 at 2019-05-22 17:54:43 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb (60449.7ms)
+Completed 200 OK in 60462ms (Views: 60456.9ms | ActiveRecord: 0.0ms)
+
+
+  Rendered pages/index.html.erb (61958.4ms)
+Completed 200 OK in 61989ms (Views: 61963.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 17:56:23 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb (57646.1ms)
+Completed 200 OK in 57699ms (Views: 57654.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 18:14:25 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (33.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 49ms (Views: 10.7ms | ActiveRecord: 33.5ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 18:14:35 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb (76031.4ms)
+Completed 200 OK in 76118ms (Views: 76036.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 18:16:26 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (204.0ms)
+Completed 200 OK in 269ms (Views: 210.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 18:17:44 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 14ms (Views: 10.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 18:17:48 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb (64054.5ms)
+Completed 200 OK in 64200ms (Views: 64163.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 18:20:57 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb (48531.6ms)
+Completed 200 OK in 48586ms (Views: 48535.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 18:21:51 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 12ms (Views: 8.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 18:21:57 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (15.0ms)
+Completed 200 OK in 43ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 18:22:03 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (10.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 14ms (Views: 3.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 18:22:22 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (8.2ms)
+Completed 200 OK in 16ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+

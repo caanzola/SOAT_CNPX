@@ -2,6 +2,7 @@
  import './App.css'
  import Registro from './sesionusuario/Registro.js'
  import IniciarSesion from './sesionusuario/IniciarSesion.js'
+ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
  class App extends React.Component{
  	
@@ -70,6 +71,8 @@ renderBtnSesion()
     return null;
   }
 }
+
+
 //
 registrarse()
 {
@@ -104,6 +107,7 @@ showContent()
         <div>
           <br/>
           <br/>
+
           <Registro loged={this.loged} atras={this.atras}/>
           <br/>
           <br/>
@@ -153,6 +157,9 @@ showContent()
 
 		          {this.showContent()}
 
+		          <Router>
+		          <Route exact path = "/users" render = {()=><div></div>}/>
+					</Router>
 		          </div>
 		        </div>
 

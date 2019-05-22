@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import '../App.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import {withRouter} from 'react-router-dom';
 
 class IniciarSesion extends Component {
   constructor(props) {
@@ -29,6 +30,7 @@ handleChangeClave(event){
 
 
 listo(){
+window.location.replace("/users");
   let {
     correo,
     clave,
@@ -84,7 +86,12 @@ let {
         </form>
         <br/>
         <div className="btnFor">
-        <button type="button" className="btnLis" onClick={this.listo}>Entrar</button>
+        <Router>
+
+        <Link to='/users'>
+          <button type="button" className="btnLis" onClick={this.listo}>Entrar</button>
+        </Link>
+        </Router>
          <span> </span>
          
         <button type="button" className="btnOut" onClick={this.atras}>Atrás</button>
