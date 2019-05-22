@@ -1857,3 +1857,403 @@ ActionView::Template::Error (undefined method `protect_against_forgery?' for #<#
   
 app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__721727750773593545_70181174836280'
 app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb___2803623043267219181_70181201301040'
+Started GET "/users" for ::1 at 2019-05-22 14:17:55 -0500
+Started GET "/users" for ::1 at 2019-05-22 14:17:55 -0500
+  [1m[35m (31.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (31.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb
+  Rendering users/index.html.erb
+  [1m[36mUser Load (18.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (18.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb (68.4ms)
+  Rendered users/index.html.erb (27.5ms)
+Completed 200 OK in 245ms (Views: 112.4ms | ActiveRecord: 22.9ms)
+
+
+Completed 200 OK in 252ms (Views: 116.1ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 14:52:58 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb
+  [1m[36mUser Load (36.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb (47.2ms)
+Completed 200 OK in 86ms (Views: 16.2ms | ActiveRecord: 36.9ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 14:52:59 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (577.7ms)
+Completed 200 OK in 625ms (Views: 582.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 15:41:32 -0500
+  [1m[35m (46.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (168.3ms)
+Completed 200 OK in 320ms (Views: 297.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 15:41:45 -0500
+Processing by UsersController#index as */*
+  Rendering users/index.html.erb
+  [1m[36mUser Load (24.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb (498.9ms)
+Completed 200 OK in 817ms (Views: 234.1ms | ActiveRecord: 328.9ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 15:53:25 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (376.1ms)
+Completed 200 OK in 433ms (Views: 383.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 15:55:00 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (471.7ms)
+Completed 200 OK in 509ms (Views: 474.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 16:04:44 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (416.5ms)
+Completed 200 OK in 443ms (Views: 422.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 16:04:48 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (77.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/mac/.rvm/rubies/ruby-2.5.3/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/mac/.rvm/rubies/ruby-2.5.3/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+Completed 500 Internal Server Error in 1084ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/mac/.rvm/rubies/ruby-2.5.3/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+NameError (undefined local variable or method `ok' for #<UsersController:0x00007f81598d8628>):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for ::1 at 2019-05-22 16:05:39 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/mac/.rvm/rubies/ruby-2.5.3/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/mac/.rvm/rubies/ruby-2.5.3/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+Completed 500 Internal Server Error in 270ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/mac/.rvm/rubies/ruby-2.5.3/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+NameError (undefined local variable or method `ok' for #<UsersController:0x00007f81555fc480>):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started POST "/__web_console/repl_sessions/1370d7b1644b204f3d7bfea3616b3c9c/trace" for ::1 at 2019-05-22 16:05:47 -0500
+Started GET "/users" for ::1 at 2019-05-22 16:06:35 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8
+  Rendered collection of templates [0 times] (0.0ms)
+Completed 200 OK in 9ms (Views: 2.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 16:06:42 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (97.3ms)
+Completed 200 OK in 110ms (Views: 100.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 16:06:47 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8
+  Rendered collection of templates [0 times] (0.0ms)
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 16:06:50 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8
+  Rendered collection of templates [0 times] (0.0ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 16:07:15 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8
+  Rendered collection of templates [0 times] (0.0ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 16:09:31 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (94.9ms)
+Completed 200 OK in 115ms (Views: 99.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 16:09:36 -0500
+  
+SyntaxError (/Users/mac/Desktop/SOAT_CNPX/app/controllers/users_controller.rb:8: syntax error, unexpected '}', expecting '('
+...rmat.json {render json: @user.}
+...                              ^
+/Users/mac/Desktop/SOAT_CNPX/app/controllers/users_controller.rb:75: syntax error, unexpected keyword_end, expecting '}'):
+  
+app/controllers/users_controller.rb:8: syntax error, unexpected '}', expecting '('
+app/controllers/users_controller.rb:75: syntax error, unexpected keyword_end, expecting '}'
+Started GET "/users" for ::1 at 2019-05-22 16:10:10 -0500
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (too few arguments):
+  
+app/controllers/users_controller.rb:8:in `format'
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for ::1 at 2019-05-22 16:10:26 -0500
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (too few arguments):
+  
+app/controllers/users_controller.rb:8:in `format'
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for ::1 at 2019-05-22 16:10:34 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb (5.5ms)
+Completed 200 OK in 55ms (Views: 7.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 16:18:23 -0500
+  
+ActionController::RoutingError (undefined method `respond_to' for UsersController:Class
+Did you mean?  respond_to?):
+  
+app/controllers/users_controller.rb:3:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<top (required)>'
+Started POST "/__web_console/repl_sessions/1f0faa35e02f8d23ee14acc0ec3c87cf/trace" for ::1 at 2019-05-22 16:18:49 -0500
+Started GET "/" for ::1 at 2019-05-22 16:29:11 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (418.9ms)
+Completed 200 OK in 455ms (Views: 424.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 16:34:43 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (61.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 409ms (Views: 16.1ms | ActiveRecord: 373.8ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 16:34:56 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for ::1 at 2019-05-22 16:36:12 -0500
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:74:in `user_params'
+app/controllers/users_controller.rb:29:in `create'
+Started GET "/users" for ::1 at 2019-05-22 16:36:32 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 16:44:09 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (23.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 40ms (Views: 12.2ms | ActiveRecord: 23.1ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 16:44:13 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 16:44:26 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 16:44:27 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2019-05-22 16:45:23 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"Camilo", "user"=>{"username"=>"Camilo"}}
+Completed 500 Internal Server Error in 354ms (ActiveRecord: 622.2ms)
+
+
+  
+NoMethodError (undefined method `respond_to' for #<UsersController:0x00007f8155717860>
+Did you mean?  respond_to?):
+  
+app/controllers/users_controller.rb:31:in `create'
+Started GET "/users" for ::1 at 2019-05-22 16:45:39 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 90ms (Views: 89.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2019-05-22 16:46:13 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"Camilo", "user"=>{"username"=>"Camilo"}}
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `respond_to' for #<UsersController:0x00007f8158b7cd80>
+Did you mean?  respond_to?):
+  
+app/controllers/users_controller.rb:31:in `create'
+Started POST "/users" for ::1 at 2019-05-22 16:47:38 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"Camilo", "user"=>{"username"=>"Camilo"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32
+  [1m[36mUser Create (1001.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "Camilo"], ["created_at", "2019-05-22 21:47:40.086477"], ["updated_at", "2019-05-22 21:47:40.086477"]]
+  ↳ app/controllers/users_controller.rb:32
+  [1m[35m (73.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 1088ms (ActiveRecord: 1553.0ms)
+
+
+Started GET "/users/1" for ::1 at 2019-05-22 16:47:41 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/show.html.erb
+  Rendered users/show.html.erb (638.2ms)
+Completed 500 Internal Server Error in 1198ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `notice' for #<#<Class:0x00007f8159a471f8>:0x00007f8159a456f0>):
+    1: <p id="notice"><%= notice %></p>
+    2: 
+    3: <p>
+    4:   <strong>Username:</strong>
+  
+app/views/users/show.html.erb:1:in `_app_views_users_show_html_erb___4113462998599024524_70096765730520'
+Started POST "/users" for ::1 at 2019-05-22 16:49:20 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"Camilo", "user"=>{"username"=>"Camilo"}}
+  [1m[35m (3.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32
+  [1m[36mUser Create (2.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "Camilo"], ["created_at", "2019-05-22 21:49:20.979134"], ["updated_at", "2019-05-22 21:49:20.979134"]]
+  ↳ app/controllers/users_controller.rb:32
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 386ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/users/2" for ::1 at 2019-05-22 16:49:21 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/show.html.erb
+  Rendered users/show.html.erb (6.7ms)
+Completed 200 OK in 201ms (Views: 90.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 16:49:34 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 175ms (Views: 173.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 16:49:53 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2019-05-22 16:50:43 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"Felipe", "user"=>{"username"=>"Felipe"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:32
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "Felipe"], ["created_at", "2019-05-22 21:50:43.503779"], ["updated_at", "2019-05-22 21:50:43.503779"]]
+  ↳ app/controllers/users_controller.rb:32
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:32
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 7ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/users/3" for ::1 at 2019-05-22 16:50:43 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:69
+  Rendering users/show.html.erb
+  Rendered users/show.html.erb (1.8ms)
+Completed 200 OK in 202ms (Views: 64.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 16:50:52 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 16:51:01 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (445.2ms)
+Completed 200 OK in 480ms (Views: 449.8ms | ActiveRecord: 0.0ms)
+
+
