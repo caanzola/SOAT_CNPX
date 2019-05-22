@@ -132,3 +132,1425 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 54982ms (Views: 54968.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-05-20 01:51:00 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (104.2ms)
+Completed 200 OK in 286ms (Views: 253.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 21:11:40 -0500
+Started GET "/" for ::1 at 2019-05-21 21:11:40 -0500
+  
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+pg (1.1.4) lib/pg.rb:56:in `initialize'
+pg (1.1.4) lib/pg.rb:56:in `new'
+pg (1.1.4) lib/pg.rb:56:in `connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+webpacker (4.0.2) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+pg (1.1.4) lib/pg.rb:56:in `initialize'
+pg (1.1.4) lib/pg.rb:56:in `new'
+pg (1.1.4) lib/pg.rb:56:in `connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+webpacker (4.0.2) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/__web_console/repl_sessions/16ad906a639ddc8d257cc8bc0f2084e7/trace" for ::1 at 2019-05-21 21:13:09 -0500
+Started GET "/" for ::1 at 2019-05-21 21:19:33 -0500
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "my_database_development" does not exist
+):
+  
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+webpacker (4.0.2) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (19399.3ms)[0m  [1m[35mCREATE DATABASE "my_database_development" ENCODING = 'utf8'[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (6783.7ms)[0m  [1m[35mCREATE DATABASE "my_database_test" ENCODING = 'utf8'[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+Started GET "/" for ::1 at 2019-05-21 21:23:10 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (60028.2ms)
+Completed 200 OK in 91715ms (Views: 91648.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 21:34:21 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (64978.7ms)
+Completed 200 OK in 65111ms (Views: 65087.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 21:37:05 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (37795.6ms)
+Completed 200 OK in 38252ms (Views: 38172.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 21:41:13 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (51627.9ms)
+Completed 200 OK in 52373ms (Views: 52339.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 21:50:23 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (82765.4ms)
+Completed 200 OK in 82944ms (Views: 82905.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 22:05:06 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (70904.3ms)
+Completed 200 OK in 71130ms (Views: 71099.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 22:07:40 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (24703.2ms)
+Completed 200 OK in 24820ms (Views: 24798.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 22:10:27 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (25159.5ms)
+Completed 200 OK in 25266ms (Views: 25243.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 22:11:24 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (149773.4ms)
+Completed 200 OK in 151680ms (Views: 151655.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 22:16:38 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (78521.3ms)
+Completed 200 OK in 79280ms (Views: 79201.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 22:18:34 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (53415.5ms)
+Completed 200 OK in 53986ms (Views: 53935.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 22:22:26 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (53051.0ms)
+Completed 200 OK in 53654ms (Views: 53595.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 22:26:54 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+
+WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+
+You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
+
+  npm install --save core-js@2    npm install --save core-js@3
+  yarn add core-js@2              yarn add core-js@3
+
+Hash: c9378d69b41ade007585
+Version: webpack 4.31.0
+Time: 8195ms
+Built at: 2019-05-21 22:27:47
+                                     Asset       Size       Chunks             Chunk Names
+    js/application-15ca4ff86ed16e5ac183.js   4.72 KiB  application  [emitted]  application
+js/application-15ca4ff86ed16e5ac183.js.map    4.5 KiB  application  [emitted]  application
+          js/index-ec170b7d934b7ea5f297.js    973 KiB        index  [emitted]  index
+      js/index-ec170b7d934b7ea5f297.js.map   1.09 MiB        index  [emitted]  index
+                             manifest.json  661 bytes               [emitted]  
+Entrypoint application = js/application-15ca4ff86ed16e5ac183.js js/application-15ca4ff86ed16e5ac183.js.map
+Entrypoint index = js/index-ec170b7d934b7ea5f297.js js/index-ec170b7d934b7ea5f297.js.map
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 443 bytes {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {index} [built]
+    + 12 hidden modules
+
+ERROR in ./app/javascript/components/App.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/mac/Desktop/SOAT_CNPX/app/javascript/components/App.js: Unexpected token, expected "," (102:2)
+
+  100 |         No loggeado
+  101 |         </div>
+> 102 |   }
+      |   ^
+  103 | }
+  104 | 
+  105 | //
+    at Object.raise (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:6322:17)
+    at Object.unexpected (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:7638:16)
+    at Object.expect (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:7624:28)
+    at Object.parseParenAndDistinguishExpression (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8921:14)
+    at Object.parseExprAtom (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8731:21)
+    at Object.parseExprAtom (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:3596:20)
+    at Object.parseExprSubscripts (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8385:23)
+    at Object.parseMaybeUnary (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8365:21)
+    at Object.parseExprOps (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8252:23)
+    at Object.parseMaybeConditional (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8225:23)
+    at Object.parseMaybeAssign (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8172:21)
+    at Object.parseExpression (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8120:23)
+    at Object.parseReturnStatement (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10132:28)
+    at Object.parseStatementContent (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9811:21)
+    at Object.parseStatement (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9763:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10340:25)
+    at Object.parseBlockBody (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10327:10)
+    at Object.parseBlock (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10311:10)
+    at Object.parseStatementContent (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9839:21)
+    at Object.parseStatement (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9763:17)
+    at Object.parseIfStatement (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10118:51)
+    at Object.parseStatementContent (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9808:21)
+    at Object.parseStatement (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9763:17)
+    at Object.parseIfStatement (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10118:51)
+    at Object.parseStatementContent (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9808:21)
+    at Object.parseStatement (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9763:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10340:25)
+    at Object.parseBlockBody (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10327:10)
+    at Object.parseBlock (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10311:10)
+    at Object.parseStatementContent (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9839:21)
+ @ ./app/javascript/packs/index.jsx 4:0-36 6:38-41
+
+  Rendered pages/index.html.erb within layouts/application (52693.7ms)
+Completed 200 OK in 53598ms (Views: 53506.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 22:28:27 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+
+WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+
+You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
+
+  npm install --save core-js@2    npm install --save core-js@3
+  yarn add core-js@2              yarn add core-js@3
+
+Hash: 268175447a48f2d9b301
+Version: webpack 4.31.0
+Time: 5585ms
+Built at: 2019-05-21 22:28:48
+                                     Asset       Size       Chunks             Chunk Names
+    js/application-15ca4ff86ed16e5ac183.js   4.72 KiB  application  [emitted]  application
+js/application-15ca4ff86ed16e5ac183.js.map    4.5 KiB  application  [emitted]  application
+          js/index-d424a9a6e39a5c04830d.js    973 KiB        index  [emitted]  index
+      js/index-d424a9a6e39a5c04830d.js.map   1.09 MiB        index  [emitted]  index
+                             manifest.json  661 bytes               [emitted]  
+Entrypoint application = js/application-15ca4ff86ed16e5ac183.js js/application-15ca4ff86ed16e5ac183.js.map
+Entrypoint index = js/index-d424a9a6e39a5c04830d.js js/index-d424a9a6e39a5c04830d.js.map
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 443 bytes {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {index} [built]
+    + 12 hidden modules
+
+ERROR in ./app/javascript/components/App.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/mac/Desktop/SOAT_CNPX/app/javascript/components/App.js: Unexpected token, expected ";" (106:10)
+
+  104 | 
+  105 | //
+> 106 |  	render(){
+      |  	        ^
+  107 | 
+  108 |  		return(	 
+  109 |  			<div>
+    at Object.raise (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:6322:17)
+    at Object.unexpected (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:7638:16)
+    at Object.semicolon (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:7620:40)
+    at Object.parseExpressionStatement (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10299:10)
+    at Object.parseStatementContent (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9897:19)
+    at Object.parseStatement (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9763:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10340:25)
+    at Object.parseBlockBody (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10327:10)
+    at Object.parseBlock (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10311:10)
+    at Object.parseFunctionBody (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9382:24)
+    at Object.parseFunctionBodyAndFinish (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9352:10)
+    at Object.parseMethod (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9306:10)
+    at Object.pushClassMethod (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10743:30)
+    at Object.parseClassMemberWithIsStatic (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10668:12)
+    at Object.parseClassMember (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10607:10)
+    at withTopicForbiddingContext (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10562:14)
+    at Object.withTopicForbiddingContext (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9657:14)
+    at Object.parseClassBody (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10539:10)
+    at Object.parseClass (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10513:22)
+    at Object.parseStatementContent (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9805:21)
+    at Object.parseStatement (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9763:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10340:25)
+    at Object.parseBlockBody (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10327:10)
+    at Object.parseTopLevel (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9692:10)
+    at Object.parse (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:11209:17)
+    at parse (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:11245:38)
+    at parser (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/core/lib/transformation/normalize-file.js:170:34)
+    at normalizeFile (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/core/lib/transformation/normalize-file.js:138:11)
+    at runSync (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/core/lib/transformation/index.js:44:43)
+    at runAsync (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/core/lib/transformation/index.js:35:14)
+ @ ./app/javascript/packs/index.jsx 4:0-36 6:38-41
+
+  Rendered pages/index.html.erb within layouts/application (21009.6ms)
+Completed 200 OK in 21500ms (Views: 21457.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 22:29:38 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (36305.8ms)
+Completed 200 OK in 36488ms (Views: 36472.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 22:30:51 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (40227.0ms)
+Completed 200 OK in 40480ms (Views: 40450.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 22:32:11 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (256.1ms)
+Completed 200 OK in 382ms (Views: 342.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 22:32:17 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 59ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 22:32:37 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 69ms (Views: 65.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 22:38:53 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+
+WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+
+You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
+
+  npm install --save core-js@2    npm install --save core-js@3
+  yarn add core-js@2              yarn add core-js@3
+
+Hash: 65c90751b8a8782ce1b0
+Version: webpack 4.31.0
+Time: 16410ms
+Built at: 2019-05-21 22:39:42
+                                     Asset       Size       Chunks             Chunk Names
+    js/application-15ca4ff86ed16e5ac183.js   4.72 KiB  application  [emitted]  application
+js/application-15ca4ff86ed16e5ac183.js.map    4.5 KiB  application  [emitted]  application
+          js/index-43bdf5bb87747799036f.js      1 MiB        index  [emitted]  index
+      js/index-43bdf5bb87747799036f.js.map   1.14 MiB        index  [emitted]  index
+                             manifest.json  661 bytes               [emitted]  
+Entrypoint application = js/application-15ca4ff86ed16e5ac183.js js/application-15ca4ff86ed16e5ac183.js.map
+Entrypoint index = js/index-43bdf5bb87747799036f.js js/index-43bdf5bb87747799036f.js.map
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 443 bytes {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {index} [built]
+    + 18 hidden modules
+
+ERROR in ./app/javascript/components/sesionusuario/Registro.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/mac/Desktop/SOAT_CNPX/app/javascript/components/sesionusuario/Registro.js: Unexpected token (75:5)
+
+  73 |           this.loged(correo, id);
+  74 |          this.setState({correo:""});
+> 75 |     });
+     |      ^
+  76 |   }
+  77 | }
+  78 | loged(correo, id1){
+    at Object.raise (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:6322:17)
+    at Object.unexpected (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:7638:16)
+    at Object.parseExprAtom (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8799:20)
+    at Object.parseExprAtom (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:3596:20)
+    at Object.parseExprSubscripts (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8385:23)
+    at Object.parseMaybeUnary (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8365:21)
+    at Object.parseExprOps (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8252:23)
+    at Object.parseMaybeConditional (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8225:23)
+    at Object.parseMaybeAssign (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8172:21)
+    at Object.parseExpression (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8120:23)
+    at Object.parseStatementContent (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9892:23)
+    at Object.parseStatement (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9763:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10340:25)
+    at Object.parseBlockBody (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10327:10)
+    at Object.parseBlock (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10311:10)
+    at Object.parseFunctionBody (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9382:24)
+    at Object.parseFunctionBodyAndFinish (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9352:10)
+    at Object.parseMethod (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9306:10)
+    at Object.pushClassMethod (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10743:30)
+    at Object.parseClassMemberWithIsStatic (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10668:12)
+    at Object.parseClassMember (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10607:10)
+    at withTopicForbiddingContext (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10562:14)
+    at Object.withTopicForbiddingContext (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9657:14)
+    at Object.parseClassBody (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10539:10)
+    at Object.parseClass (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10513:22)
+    at Object.parseStatementContent (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9805:21)
+    at Object.parseStatement (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9763:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10340:25)
+    at Object.parseBlockBody (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10327:10)
+    at Object.parseTopLevel (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9692:10)
+ @ ./app/javascript/components/App.js 21:0-51 214:34-42
+ @ ./app/javascript/packs/index.jsx
+
+  Rendered pages/index.html.erb within layouts/application (48336.9ms)
+Completed 200 OK in 48497ms (Views: 48477.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 22:40:22 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+
+WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+
+You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
+
+  npm install --save core-js@2    npm install --save core-js@3
+  yarn add core-js@2              yarn add core-js@3
+
+Hash: 1fe9e000e0d54590d420
+Version: webpack 4.31.0
+Time: 8483ms
+Built at: 2019-05-21 22:40:48
+                                     Asset       Size       Chunks             Chunk Names
+    js/application-15ca4ff86ed16e5ac183.js   4.72 KiB  application  [emitted]  application
+js/application-15ca4ff86ed16e5ac183.js.map    4.5 KiB  application  [emitted]  application
+          js/index-36f367b7186dffece049.js   1.01 MiB        index  [emitted]  index
+      js/index-36f367b7186dffece049.js.map   1.14 MiB        index  [emitted]  index
+                             manifest.json  661 bytes               [emitted]  
+Entrypoint application = js/application-15ca4ff86ed16e5ac183.js js/application-15ca4ff86ed16e5ac183.js.map
+Entrypoint index = js/index-36f367b7186dffece049.js js/index-36f367b7186dffece049.js.map
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 443 bytes {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {index} [built]
+    + 18 hidden modules
+
+ERROR in ./app/javascript/components/App.js 214:34-42
+"export 'default' (imported as 'Registro') was not found in './sesionusuario/Registro.js'
+ @ ./app/javascript/packs/index.jsx
+
+  Rendered pages/index.html.erb within layouts/application (26838.0ms)
+Completed 200 OK in 27165ms (Views: 27136.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 22:42:29 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+
+WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+
+You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
+
+  npm install --save core-js@2    npm install --save core-js@3
+  yarn add core-js@2              yarn add core-js@3
+
+Hash: 43e601b5fdec989e4fbb
+Version: webpack 4.31.0
+Time: 11795ms
+Built at: 2019-05-21 22:42:57
+                                     Asset       Size       Chunks             Chunk Names
+    js/application-15ca4ff86ed16e5ac183.js   4.72 KiB  application  [emitted]  application
+js/application-15ca4ff86ed16e5ac183.js.map    4.5 KiB  application  [emitted]  application
+          js/index-50fa78f10855cd405721.js      1 MiB        index  [emitted]  index
+      js/index-50fa78f10855cd405721.js.map   1.14 MiB        index  [emitted]  index
+                             manifest.json  661 bytes               [emitted]  
+Entrypoint application = js/application-15ca4ff86ed16e5ac183.js js/application-15ca4ff86ed16e5ac183.js.map
+Entrypoint index = js/index-50fa78f10855cd405721.js js/index-50fa78f10855cd405721.js.map
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 443 bytes {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {index} [built]
+    + 18 hidden modules
+
+ERROR in ./app/javascript/components/App.js 214:34-42
+"export 'default' (imported as 'Registro') was not found in './sesionusuario/Registro.js'
+ @ ./app/javascript/packs/index.jsx
+
+  Rendered pages/index.html.erb within layouts/application (28315.6ms)
+Completed 200 OK in 28487ms (Views: 28460.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 22:45:51 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+
+WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+
+You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
+
+  npm install --save core-js@2    npm install --save core-js@3
+  yarn add core-js@2              yarn add core-js@3
+
+Hash: 3b34818b4fda831657e9
+Version: webpack 4.31.0
+Time: 6326ms
+Built at: 2019-05-21 22:46:11
+                                     Asset       Size       Chunks             Chunk Names
+    js/application-15ca4ff86ed16e5ac183.js   4.72 KiB  application  [emitted]  application
+js/application-15ca4ff86ed16e5ac183.js.map    4.5 KiB  application  [emitted]  application
+          js/index-e012171bd0e375366a67.js      1 MiB        index  [emitted]  index
+      js/index-e012171bd0e375366a67.js.map   1.14 MiB        index  [emitted]  index
+                             manifest.json  661 bytes               [emitted]  
+Entrypoint application = js/application-15ca4ff86ed16e5ac183.js js/application-15ca4ff86ed16e5ac183.js.map
+Entrypoint index = js/index-e012171bd0e375366a67.js js/index-e012171bd0e375366a67.js.map
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 443 bytes {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {index} [built]
+    + 18 hidden modules
+
+ERROR in ./app/javascript/components/App.js 214:34-42
+"export 'default' (imported as 'Registro') was not found in './sesionusuario/Registro.js'
+ @ ./app/javascript/packs/index.jsx
+
+  Rendered pages/index.html.erb within layouts/application (19757.1ms)
+Completed 200 OK in 19826ms (Views: 19811.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 22:49:33 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+
+WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+
+You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
+
+  npm install --save core-js@2    npm install --save core-js@3
+  yarn add core-js@2              yarn add core-js@3
+
+Hash: b0bd3414d2dc49de7bb9
+Version: webpack 4.31.0
+Time: 5275ms
+Built at: 2019-05-21 22:49:44
+                                     Asset       Size       Chunks             Chunk Names
+    js/application-15ca4ff86ed16e5ac183.js   4.72 KiB  application  [emitted]  application
+js/application-15ca4ff86ed16e5ac183.js.map    4.5 KiB  application  [emitted]  application
+          js/index-f03d5793d34d0e59478d.js      1 MiB        index  [emitted]  index
+      js/index-f03d5793d34d0e59478d.js.map   1.14 MiB        index  [emitted]  index
+                             manifest.json  661 bytes               [emitted]  
+Entrypoint application = js/application-15ca4ff86ed16e5ac183.js js/application-15ca4ff86ed16e5ac183.js.map
+Entrypoint index = js/index-f03d5793d34d0e59478d.js js/index-f03d5793d34d0e59478d.js.map
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 443 bytes {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {index} [built]
+    + 18 hidden modules
+
+ERROR in ./app/javascript/components/App.js 214:34-42
+"export 'Registro' was not found in './sesionusuario/Registro.js'
+ @ ./app/javascript/packs/index.jsx
+
+  Rendered pages/index.html.erb within layouts/application (11764.5ms)
+Completed 200 OK in 11920ms (Views: 11916.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 22:50:54 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+
+WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+
+You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
+
+  npm install --save core-js@2    npm install --save core-js@3
+  yarn add core-js@2              yarn add core-js@3
+
+Hash: 3b34818b4fda831657e9
+Version: webpack 4.31.0
+Time: 8631ms
+Built at: 2019-05-21 22:51:12
+                                     Asset       Size       Chunks             Chunk Names
+    js/application-15ca4ff86ed16e5ac183.js   4.72 KiB  application  [emitted]  application
+js/application-15ca4ff86ed16e5ac183.js.map    4.5 KiB  application  [emitted]  application
+          js/index-e012171bd0e375366a67.js      1 MiB        index  [emitted]  index
+      js/index-e012171bd0e375366a67.js.map   1.14 MiB        index  [emitted]  index
+                             manifest.json  661 bytes               [emitted]  
+Entrypoint application = js/application-15ca4ff86ed16e5ac183.js js/application-15ca4ff86ed16e5ac183.js.map
+Entrypoint index = js/index-e012171bd0e375366a67.js js/index-e012171bd0e375366a67.js.map
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 443 bytes {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {index} [built]
+    + 18 hidden modules
+
+ERROR in ./app/javascript/components/App.js 214:34-42
+"export 'default' (imported as 'Registro') was not found in './sesionusuario/Registro.js'
+ @ ./app/javascript/packs/index.jsx
+
+  Rendered pages/index.html.erb within layouts/application (18309.3ms)
+Completed 200 OK in 18461ms (Views: 18456.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 22:53:38 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (50139.4ms)
+Completed 200 OK in 50534ms (Views: 50487.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 22:55:06 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (42688.2ms)
+Completed 200 OK in 43768ms (Views: 43755.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 22:56:59 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (27311.5ms)
+Completed 200 OK in 27788ms (Views: 27696.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 22:59:26 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (55813.9ms)
+Completed 200 OK in 56653ms (Views: 56594.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 23:02:33 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (46942.3ms)
+Completed 200 OK in 49541ms (Views: 49493.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 23:07:22 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+
+WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+
+You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
+
+  npm install --save core-js@2    npm install --save core-js@3
+  yarn add core-js@2              yarn add core-js@3
+
+Hash: 66b96567192366924370
+Version: webpack 4.31.0
+Time: 14400ms
+Built at: 2019-05-21 23:08:07
+                                     Asset       Size       Chunks             Chunk Names
+    js/application-15ca4ff86ed16e5ac183.js   4.72 KiB  application  [emitted]  application
+js/application-15ca4ff86ed16e5ac183.js.map    4.5 KiB  application  [emitted]  application
+          js/index-e26be1fab49083cd579d.js   1.01 MiB        index  [emitted]  index
+      js/index-e26be1fab49083cd579d.js.map   1.14 MiB        index  [emitted]  index
+                             manifest.json  661 bytes               [emitted]  
+Entrypoint application = js/application-15ca4ff86ed16e5ac183.js js/application-15ca4ff86ed16e5ac183.js.map
+Entrypoint index = js/index-e26be1fab49083cd579d.js js/index-e26be1fab49083cd579d.js.map
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 443 bytes {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {index} [built]
+    + 18 hidden modules
+
+ERROR in ./app/javascript/components/sesionusuario/Registro.js
+Module not found: Error: Can't resolve 'bootstrap/dist/css/bootstrap.min.css' in '/Users/mac/Desktop/SOAT_CNPX/app/javascript/components/sesionusuario'
+ @ ./app/javascript/components/sesionusuario/Registro.js 22:0-46
+ @ ./app/javascript/components/App.js
+ @ ./app/javascript/packs/index.jsx
+
+  Rendered pages/index.html.erb within layouts/application (45498.7ms)
+Completed 200 OK in 46126ms (Views: 46048.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 23:08:18 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (37422.8ms)
+Completed 200 OK in 38058ms (Views: 37927.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 23:21:32 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (36194.6ms)
+Completed 200 OK in 39318ms (Views: 39280.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 23:23:02 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (27844.7ms)
+Completed 200 OK in 28661ms (Views: 28627.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 23:27:06 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (76056.3ms)
+Completed 200 OK in 76856ms (Views: 76744.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 23:30:22 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (47054.3ms)
+Completed 200 OK in 47535ms (Views: 47480.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 23:32:10 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (50264.4ms)
+Completed 200 OK in 50903ms (Views: 50831.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 23:34:29 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (42181.9ms)
+Completed 200 OK in 42702ms (Views: 42641.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 23:38:56 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (43261.1ms)
+Completed 200 OK in 43526ms (Views: 43494.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 23:46:06 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+
+WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+
+You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
+
+  npm install --save core-js@2    npm install --save core-js@3
+  yarn add core-js@2              yarn add core-js@3
+
+Hash: 02ea70a599a5af956813
+Version: webpack 4.31.0
+Time: 13856ms
+Built at: 2019-05-21 23:46:47
+                                     Asset       Size       Chunks             Chunk Names
+    js/application-15ca4ff86ed16e5ac183.js   4.72 KiB  application  [emitted]  application
+js/application-15ca4ff86ed16e5ac183.js.map    4.5 KiB  application  [emitted]  application
+          js/index-17a24d5d350ef238d9f1.js   1.01 MiB        index  [emitted]  index
+      js/index-17a24d5d350ef238d9f1.js.map   1.14 MiB        index  [emitted]  index
+                             manifest.json  661 bytes               [emitted]  
+Entrypoint application = js/application-15ca4ff86ed16e5ac183.js js/application-15ca4ff86ed16e5ac183.js.map
+Entrypoint index = js/index-17a24d5d350ef238d9f1.js js/index-17a24d5d350ef238d9f1.js.map
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 443 bytes {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {index} [built]
+    + 19 hidden modules
+
+ERROR in ./app/javascript/components/sesionusuario/Registro.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/mac/Desktop/SOAT_CNPX/app/javascript/components/sesionusuario/Registro.js: Expected corresponding JSX closing tag for <select> (150:10)
+
+  148 |             <option value="Personal">Cliente</option>
+  149 |             <option value="Monitoria">Administrador</option>
+> 150 |           </div>
+      |           ^
+  151 |         </form>
+  152 |         <br/>
+  153 |         <button type="button" className="btnLis" onClick={this.listo}>Registrarme</button>
+    at Object.raise (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:6322:17)
+    at Object.jsxParseElementAt (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:3558:16)
+    at Object.jsxParseElementAt (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:3531:32)
+    at Object.jsxParseElementAt (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:3531:32)
+    at Object.jsxParseElementAt (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:3531:32)
+    at Object.jsxParseElementAt (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:3531:32)
+    at Object.jsxParseElement (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:3584:17)
+    at Object.parseExprAtom (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:3591:19)
+    at Object.parseExprSubscripts (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8385:23)
+    at Object.parseMaybeUnary (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8365:21)
+    at Object.parseExprOps (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8252:23)
+    at Object.parseMaybeConditional (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8225:23)
+    at Object.parseMaybeAssign (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8172:21)
+    at Object.parseParenAndDistinguishExpression (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8937:28)
+    at Object.parseExprAtom (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8731:21)
+    at Object.parseExprAtom (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:3596:20)
+    at Object.parseExprSubscripts (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8385:23)
+    at Object.parseMaybeUnary (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8365:21)
+    at Object.parseExprOps (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8252:23)
+    at Object.parseMaybeConditional (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8225:23)
+    at Object.parseMaybeAssign (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8172:21)
+    at Object.parseExpression (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8120:23)
+    at Object.parseReturnStatement (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10132:28)
+    at Object.parseStatementContent (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9811:21)
+    at Object.parseStatement (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9763:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10340:25)
+    at Object.parseBlockBody (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10327:10)
+    at Object.parseBlock (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10311:10)
+    at Object.parseFunctionBody (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9382:24)
+    at Object.parseFunctionBodyAndFinish (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9352:10)
+ @ ./app/javascript/components/App.js 21:0-51 228:34-42
+ @ ./app/javascript/packs/index.jsx
+
+  Rendered pages/index.html.erb within layouts/application (40823.3ms)
+Completed 200 OK in 41225ms (Views: 41177.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 23:48:16 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (15004.8ms)
+Completed 200 OK in 15059ms (Views: 15055.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-21 23:49:24 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (25949.3ms)
+Completed 200 OK in 26067ms (Views: 26063.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 00:14:12 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (43252.8ms)
+Completed 200 OK in 50763ms (Views: 50690.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 00:18:53 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (58747.8ms)
+Completed 200 OK in 59220ms (Views: 59179.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 00:20:22 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (54754.7ms)
+Completed 200 OK in 55036ms (Views: 54984.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 00:22:30 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+
+WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+
+You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
+
+  npm install --save core-js@2    npm install --save core-js@3
+  yarn add core-js@2              yarn add core-js@3
+
+Hash: b08e82cb0ca4e68b0845
+Version: webpack 4.31.0
+Time: 16264ms
+Built at: 2019-05-22 00:23:16
+                                     Asset       Size       Chunks             Chunk Names
+    js/application-15ca4ff86ed16e5ac183.js   4.72 KiB  application  [emitted]  application
+js/application-15ca4ff86ed16e5ac183.js.map    4.5 KiB  application  [emitted]  application
+          js/index-040e25308077a1cae294.js   2.03 MiB        index  [emitted]  index
+      js/index-040e25308077a1cae294.js.map   2.18 MiB        index  [emitted]  index
+                             manifest.json  661 bytes               [emitted]  
+Entrypoint application = js/application-15ca4ff86ed16e5ac183.js js/application-15ca4ff86ed16e5ac183.js.map
+Entrypoint index = js/index-040e25308077a1cae294.js js/index-040e25308077a1cae294.js.map
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 443 bytes {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {index} [built]
+    + 43 hidden modules
+
+ERROR in ./app/javascript/components/App.js 89:31-37
+"export 'BrowseRouter' (imported as 'Router') was not found in 'react-router-dom'
+ @ ./app/javascript/packs/index.jsx
+
+  Rendered pages/index.html.erb within layouts/application (47085.8ms)
+Completed 200 OK in 47387ms (Views: 47348.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 00:24:25 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+
+WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+
+You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
+
+  npm install --save core-js@2    npm install --save core-js@3
+  yarn add core-js@2              yarn add core-js@3
+
+Hash: fcd66c4988548011aa43
+Version: webpack 4.31.0
+Time: 41684ms
+Built at: 2019-05-22 00:25:36
+                                     Asset       Size       Chunks             Chunk Names
+    js/application-15ca4ff86ed16e5ac183.js   4.72 KiB  application  [emitted]  application
+js/application-15ca4ff86ed16e5ac183.js.map    4.5 KiB  application  [emitted]  application
+          js/index-155deb5b198f7744a02d.js   2.03 MiB        index  [emitted]  index
+      js/index-155deb5b198f7744a02d.js.map   2.18 MiB        index  [emitted]  index
+                             manifest.json  661 bytes               [emitted]  
+Entrypoint application = js/application-15ca4ff86ed16e5ac183.js js/application-15ca4ff86ed16e5ac183.js.map
+Entrypoint index = js/index-155deb5b198f7744a02d.js js/index-155deb5b198f7744a02d.js.map
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 443 bytes {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {index} [built]
+    + 43 hidden modules
+
+ERROR in ./app/javascript/components/App.js 82:35-41
+"export 'BrowseRouter' (imported as 'Router') was not found in 'react-router-dom'
+ @ ./app/javascript/packs/index.jsx
+
+  Rendered pages/index.html.erb within layouts/application (72567.3ms)
+Completed 200 OK in 74258ms (Views: 74219.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 00:33:05 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (77349.7ms)
+Completed 200 OK in 77874ms (Views: 77818.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 00:36:14 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (57682.9ms)
+Completed 200 OK in 59111ms (Views: 59070.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 00:38:17 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+
+WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+
+You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
+
+  npm install --save core-js@2    npm install --save core-js@3
+  yarn add core-js@2              yarn add core-js@3
+
+Hash: 8e28b1177246e5a31e69
+Version: webpack 4.31.0
+Time: 30185ms
+Built at: 2019-05-22 00:39:35
+                                     Asset       Size       Chunks             Chunk Names
+    js/application-15ca4ff86ed16e5ac183.js   4.72 KiB  application  [emitted]  application
+js/application-15ca4ff86ed16e5ac183.js.map    4.5 KiB  application  [emitted]  application
+          js/index-ca00d393f68dfde8ce3e.js   2.03 MiB        index  [emitted]  index
+      js/index-ca00d393f68dfde8ce3e.js.map   2.18 MiB        index  [emitted]  index
+                             manifest.json  661 bytes               [emitted]  
+Entrypoint application = js/application-15ca4ff86ed16e5ac183.js js/application-15ca4ff86ed16e5ac183.js.map
+Entrypoint index = js/index-ca00d393f68dfde8ce3e.js js/index-ca00d393f68dfde8ce3e.js.map
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 443 bytes {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {index} [built]
+    + 43 hidden modules
+
+ERROR in ./app/javascript/components/App.js 90:31-37
+"export 'BrowseRouter' (imported as 'Router') was not found in 'react-router-dom'
+ @ ./app/javascript/packs/index.jsx
+
+  Rendered pages/index.html.erb within layouts/application (77885.1ms)
+Completed 200 OK in 78415ms (Views: 78357.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 00:41:53 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (76596.5ms)
+Completed 200 OK in 77177ms (Views: 77102.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/registro" for ::1 at 2019-05-22 00:46:18 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/registro"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+webpacker (4.0.2) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/registro" for ::1 at 2019-05-22 00:46:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/registro"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+webpacker (4.0.2) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-05-22 00:46:44 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+Started GET "/" for ::1 at 2019-05-22 00:46:48 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (59986.0ms)
+  Rendered pages/index.html.erb within layouts/application (64399.9ms)
+Completed 200 OK in 61234ms (Views: 61230.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 65842ms (Views: 65762.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 00:49:58 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (34641.1ms)
+Completed 200 OK in 34963ms (Views: 34923.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 00:53:32 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+
+WARNING: We noticed you're using the `useBuiltIns` option without declaring a core-js version. Currently, we assume version 2.x when no version is passed. Since this default version will likely change in future versions of Babel, we recommend explicitly setting the core-js version you are using via the `corejs` option.
+
+You should also be sure that the version you pass to the `corejs` option matches the version specified in your `package.json`'s `dependencies` section. If it doesn't, you need to run one of the following commands:
+
+  npm install --save core-js@2    npm install --save core-js@3
+  yarn add core-js@2              yarn add core-js@3
+
+Hash: f93137ff6ca7213ec72f
+Version: webpack 4.31.0
+Time: 8346ms
+Built at: 2019-05-22 00:54:19
+                                     Asset       Size       Chunks             Chunk Names
+    js/application-15ca4ff86ed16e5ac183.js   4.72 KiB  application  [emitted]  application
+js/application-15ca4ff86ed16e5ac183.js.map    4.5 KiB  application  [emitted]  application
+          js/index-2b9c5f1f3080167e83c0.js    973 KiB        index  [emitted]  index
+      js/index-2b9c5f1f3080167e83c0.js.map   1.09 MiB        index  [emitted]  index
+                             manifest.json  661 bytes               [emitted]  
+Entrypoint application = js/application-15ca4ff86ed16e5ac183.js js/application-15ca4ff86ed16e5ac183.js.map
+Entrypoint index = js/index-2b9c5f1f3080167e83c0.js js/index-2b9c5f1f3080167e83c0.js.map
+[./app/javascript/packs/application.js] 845 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 443 bytes {index} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 878 bytes {index} [built]
+    + 12 hidden modules
+
+ERROR in ./app/javascript/components/App.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/mac/Desktop/SOAT_CNPX/app/javascript/components/App.js: Unexpected token (110:10)
+
+  108 |           <br/>
+  109 |           <Route path='/registro'
+> 110 |           <Registro loged={this.loged} atras={this.atras}/>/>
+      |           ^
+  111 |           <br/>
+  112 |           <br/>
+  113 |         </div>);
+    at Object.raise (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:6322:17)
+    at Object.unexpected (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:7638:16)
+    at Object.jsxParseIdentifier (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:3376:12)
+    at Object.jsxParseNamespacedName (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:3386:23)
+    at Object.jsxParseAttribute (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:3469:22)
+    at Object.jsxParseOpeningElementAfterName (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:3490:28)
+    at Object.jsxParseOpeningElementAt (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:3483:17)
+    at Object.jsxParseElementAt (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:3515:33)
+    at Object.jsxParseElementAt (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:3531:32)
+    at Object.jsxParseElement (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:3584:17)
+    at Object.parseExprAtom (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:3591:19)
+    at Object.parseExprSubscripts (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8385:23)
+    at Object.parseMaybeUnary (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8365:21)
+    at Object.parseExprOps (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8252:23)
+    at Object.parseMaybeConditional (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8225:23)
+    at Object.parseMaybeAssign (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8172:21)
+    at Object.parseParenAndDistinguishExpression (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8937:28)
+    at Object.parseExprAtom (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8731:21)
+    at Object.parseExprAtom (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:3596:20)
+    at Object.parseExprSubscripts (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8385:23)
+    at Object.parseMaybeUnary (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8365:21)
+    at Object.parseExprOps (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8252:23)
+    at Object.parseMaybeConditional (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8225:23)
+    at Object.parseMaybeAssign (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8172:21)
+    at Object.parseExpression (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:8120:23)
+    at Object.parseReturnStatement (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10132:28)
+    at Object.parseStatementContent (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9811:21)
+    at Object.parseStatement (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:9763:17)
+    at Object.parseBlockOrModuleBlockBody (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10340:25)
+    at Object.parseBlockBody (/Users/mac/Desktop/SOAT_CNPX/node_modules/@babel/parser/lib/index.js:10327:10)
+ @ ./app/javascript/packs/index.jsx 4:0-36 6:38-41
+
+  Rendered pages/index.html.erb within layouts/application (48309.8ms)
+Completed 200 OK in 49856ms (Views: 49800.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 00:56:11 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (80352.7ms)
+Completed 200 OK in 82557ms (Views: 82489.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/registro" for ::1 at 2019-05-22 00:58:15 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/registro"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+webpacker (4.0.2) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-05-22 00:58:23 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (53254.5ms)
+Completed 200 OK in 53912ms (Views: 53846.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 01:56:31 -0500
+Started GET "/" for ::1 at 2019-05-22 01:56:31 -0500
+Processing by PagesController#index as HTML
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (108186.1ms)
+  Rendered pages/index.html.erb within layouts/application (108349.9ms)
+Completed 200 OK in 140552ms (Views: 140519.9ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 140544ms (Views: 140493.7ms | ActiveRecord: 0.0ms)
+
+
