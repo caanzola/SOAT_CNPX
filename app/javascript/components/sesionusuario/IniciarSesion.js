@@ -30,7 +30,10 @@ handleChangeClave(event){
 
 
 listo(){
-window.location.replace("/users");
+
+
+
+
   let {
     correo,
     clave,
@@ -42,7 +45,52 @@ window.location.replace("/users");
     alert("Se requiere clave");
   }
   else {
-        this.loged(correo);
+
+   fetch('/users.json', {
+        method: 'get',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': Rails.csrfToken()
+        },
+        credentials: 'same-origin'
+      }).then(response => {
+        return response.json()
+  })
+  .then(data => {
+    // Work with JSON data here
+    
+    console.log(data);
+    let x = 0;
+    data.forEach((user) => {
+      
+      console.log(user.email);
+      console.log(user.password);
+
+      if(user.email === correo && user.password === clave)
+      {
+        x = 1;
+        
+        if(user.rol === "Cliente")
+          window.location.replace("/users");
+        else
+          window.location.replace("/polizas");
+        
+      }
+
+       
+      
+    });
+
+    if(x == 0)
+    {
+       alert("Usuario o contraseña incorrecta");
+    }
+    
+  });
+
+   
+    
+        
 
   }
 }

@@ -12,7 +12,7 @@ class Registro extends Component {
       nombre: "",
       correo: "",
       clave:"",
-      tipo:"",
+      tipo:"Cliente",
       repetirClave:"",
       error:""
     };
@@ -73,8 +73,30 @@ listo(){
     }
   else {
     //trata de registar al usuario
+
+    console.log(correo);
     
     let id= Math.random()* (10000-1000) + 1000 ;
+
+       fetch('/users', {
+        method: 'post',
+        body: JSON.stringify({username: nombre, password: clave, email:correo, rol:this.state.tipo}),
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': Rails.csrfToken()
+        },
+        credentials: 'same-origin'
+      }).then(function(response) {
+        return response.json();
+      }).then(function(data) {
+        console.log(data);
+      });
+
+      if(this.state.tipo === "Cliente")
+          window.location.replace("/users");
+        else
+          window.location.replace("/polizas");
+
           this.loged(correo, id);
          this.setState({correo:""});
   
@@ -147,8 +169,8 @@ let {
           <div className="form-group">
             <label htmlFor="formControlSelect" className="letra">Tipo de usuario: </label>
             <select className="form-control" id="formControlSelect" value={tipo} onChange={this.tipoChange}>
-            <option value="Personal">Cliente</option>
-            <option value="Monitoria">Administrador</option>
+            <option value="Cliente">Cliente</option>
+            <option value="Administrador">Administrador</option>
             </select>
           </div>
         </form>
