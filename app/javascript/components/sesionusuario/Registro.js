@@ -78,6 +78,11 @@ listo(){
     
     let id= Math.random()* (10000-1000) + 1000 ;
 
+    console.log(nombre);
+    console.log(clave);
+    console.log(correo);
+    console.log(this.state.tipo);
+
        fetch('/users', {
         method: 'post',
         body: JSON.stringify({username: nombre, password: clave, email:correo, rol:this.state.tipo}),
@@ -92,6 +97,7 @@ listo(){
         console.log(data);
       });
 
+  /*
       if(this.state.tipo === "Cliente")
           window.location.replace("/users");
         else
@@ -99,7 +105,8 @@ listo(){
 
           this.loged(correo, id);
          this.setState({correo:""});
-  
+  */
+
   }
 }
 
