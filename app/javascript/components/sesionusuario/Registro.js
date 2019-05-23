@@ -97,12 +97,12 @@ listo(){
         console.log(data);
       });
 
-  /*
+  
       if(this.state.tipo === "Cliente")
           window.location.replace("/users");
         else
           window.location.replace("/polizas");
-
+  /*
           this.loged(correo, id);
          this.setState({correo:""});
   */
