@@ -71,9 +71,9 @@ listo(){
         x = 1;
         
         if(user.rol === "Cliente")
-          window.location.replace("/users");
+          window.location.replace("/seguros/new");
         else
-          window.location.replace("/polizas");
+          window.location.replace("/seguros");
         
       }
 
@@ -134,12 +134,8 @@ let {
         </form>
         <br/>
         <div className="btnFor">
-        <Router>
-
-        <Link to='/users'>
+        
           <button type="button" className="btnLis" onClick={this.listo}>Entrar</button>
-        </Link>
-        </Router>
          <span> </span>
          
         <button type="button" className="btnOut" onClick={this.atras}>Atrás</button>

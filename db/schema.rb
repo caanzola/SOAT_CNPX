@@ -10,13 +10,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_23_071605) do
+ActiveRecord::Schema.define(version: 2019_05_23_203034) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "polizas", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "seguros", force: :cascade do |t|
+    t.string "Placa_del_vehiculo"
+    t.string "Fecha_inicio_vigencia"
+    t.string "Fecha_fin_vigencia"
+    t.integer "Numero_pasajeros"
+    t.integer "Cilindraje"
+    t.string "Clase"
+    t.integer "Toneladas"
+    t.integer "Edad"
+    t.string "Precio"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "soatseguros", force: :cascade do |t|
+    t.string "Placa"
+    t.string "del"
+    t.string "vehiculo"
+    t.string "Fecha"
+    t.string "inicio"
+    t.string "vigencia"
+    t.string "fin"
+    t.string "Numero"
+    t.integer "pasajeros"
+    t.integer "Cilindraje"
+    t.string "Clase"
+    t.integer "Toneladas"
+    t.integer "Edad"
+    t.string "Precio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,0 +1,2 @@
+class Soatseguro < ApplicationRecord
+end

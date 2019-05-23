@@ -1,0 +1,28 @@
+
+<%= simple_form_for(@soatseguro) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :Placa %>
+    <%= f.input :del %>
+    <%= f.input :vehiculo %>
+    <%= f.input :Fecha %>
+    <%= f.input :inicio %>
+    <%= f.input :vigencia %>
+    <%= f.input :Fecha %>
+    <%= f.input :fin %>
+    <%= f.input :vigencia %>
+    <%= f.input :Numero %>
+    <%= f.input :pasajeros %>
+    <%= f.input :Cilindraje %>
+    <%= f.input :Clase %>
+    <%= f.input :Toneladas %>
+    <%= f.input :Edad %>
+    <%= f.input :Precio %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

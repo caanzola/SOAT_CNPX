@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :soatseguros
+  resources :seguros
   resources :polizas
   resources :users
   root 'pages#index'

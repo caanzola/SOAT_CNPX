@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Placa_del_vehiculo: MyString
+  Fecha_inicio_vigencia: MyString
+  Fecha_fin_vigencia: MyString
+  Numero_pasajeros: 1
+  Cilindraje: 1
+  Clase: MyString
+  Toneladas: 1
+  Edad: 1
+  Precio: MyString
+
+two:
+  Placa_del_vehiculo: MyString
+  Fecha_inicio_vigencia: MyString
+  Fecha_fin_vigencia: MyString
+  Numero_pasajeros: 1
+  Cilindraje: 1
+  Clase: MyString
+  Toneladas: 1
+  Edad: 1
+  Precio: MyString

@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Placa del vehiculo:</strong>
+  <%= @seguro.Placa_del_vehiculo %>
+</p>
+
+<p>
+  <strong>Fecha inicio vigencia:</strong>
+  <%= @seguro.Fecha_inicio_vigencia %>
+</p>
+
+<p>
+  <strong>Fecha fin vigencia:</strong>
+  <%= @seguro.Fecha_fin_vigencia %>
+</p>
+
+<p>
+  <strong>Numero pasajeros:</strong>
+  <%= @seguro.Numero_pasajeros %>
+</p>
+
+<p>
+  <strong>Cilindraje:</strong>
+  <%= @seguro.Cilindraje %>
+</p>
+
+<p>
+  <strong>Clase:</strong>
+  <%= @seguro.Clase %>
+</p>
+
+<p>
+  <strong>Toneladas:</strong>
+  <%= @seguro.Toneladas %>
+</p>
+
+<p>
+  <strong>Edad:</strong>
+  <%= @seguro.Edad %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @seguro.Precio %>
+</p>
+
+<%= link_to 'Edit', edit_seguro_path(@seguro) %> |
+<%= link_to 'Solicitar nuevo seguro', new_seguro_path %>

@@ -99,9 +99,9 @@ listo(){
 
   
       if(this.state.tipo === "Cliente")
-          window.location.replace("/users");
+          window.location.replace("/seguros/new");
         else
-          window.location.replace("/polizas");
+          window.location.replace("/seguros");
   /*
           this.loged(correo, id);
          this.setState({correo:""});

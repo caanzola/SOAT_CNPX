@@ -7830,3 +7830,760 @@ Processing by PolizasController#index as HTML
 Completed 200 OK in 274ms (Views: 137.9ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/" for ::1 at 2019-05-23 14:03:30 -0500
+  [1m[35m (26.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+webpacker (4.0.2) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (108.1ms)[0m  [1m[35mCREATE DATABASE "myapp_development" ENCODING = 'unicode'[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "myapp_test" ENCODING = 'unicode'[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (24.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+Migrating to CreateSeguros (20190523185920)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (561.5ms)[0m  [1m[35mCREATE TABLE "seguros" ("id" bigserial primary key, "placaVehiculo" character varying, "inicioVigencia" character varying, "finVigencia" character varying, "numPasajeros" integer, "cilindraje" integer, "clase" character varying, "toneladas" integer, "edad" integer, "precio" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190523185920_create_seguros.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (141.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190523185920"]]
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (11.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (61.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+Started GET "/" for ::1 at 2019-05-23 14:11:52 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (51635.9ms)
+Completed 200 OK in 64727ms (Views: 64680.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users.json" for ::1 at 2019-05-23 14:14:10 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (43.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered users/_user.json.jbuilder (1.4ms)
+  Rendered users/_user.json.jbuilder (0.5ms)
+  Rendered users/_user.json.jbuilder (0.8ms)
+  Rendered users/index.json.jbuilder (142.2ms)
+Completed 200 OK in 206ms (Views: 44.3ms | ActiveRecord: 249.1ms)
+
+
+Started GET "/seguros" for ::1 at 2019-05-23 14:14:11 -0500
+Processing by SegurosController#index as HTML
+  Rendering seguros/index.html.erb within layouts/application
+  [1m[36mSeguro Load (79.2ms)[0m  [1m[34mSELECT "seguros".* FROM "seguros"[0m
+  ↳ app/views/seguros/index.html.erb:22
+  Rendered seguros/index.html.erb within layouts/application (85.8ms)
+Completed 200 OK in 234ms (Views: 100.9ms | ActiveRecord: 81.5ms)
+
+
+Started GET "/seguros/new" for ::1 at 2019-05-23 14:14:51 -0500
+Processing by SegurosController#new as HTML
+  Rendering seguros/new.html.erb within layouts/application
+  Rendered seguros/_form.html.erb (349.8ms)
+  Rendered seguros/new.html.erb within layouts/application (380.5ms)
+Completed 200 OK in 614ms (Views: 563.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/seguros/new" for ::1 at 2019-05-23 14:17:25 -0500
+Processing by SegurosController#new as HTML
+  Rendering seguros/new.html.erb within layouts/application
+  Rendered seguros/_form.html.erb (14.0ms)
+  Rendered seguros/new.html.erb within layouts/application (18.3ms)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/mac/Desktop/SOAT_CNPX/app/views/seguros/_form.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+...fer.append=( f.input :Placa del vehiculo );@output_buffer.sa...
+...                            ^~~):
+  
+app/views/seguros/_form.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/seguros/new.html.erb:3:in `_app_views_seguros_new_html_erb__1131202037092108094_70181412077780'
+  [1m[35m (38.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+Migrating to CreateSeguros (20190523185920)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (152.2ms)[0m  [1m[35mDROP TABLE "seguros"[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (30.9ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20190523185920"]]
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (163.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+Started GET "/" for ::1 at 2019-05-23 14:37:47 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (529.6ms)
+Completed 200 OK in 1472ms (Views: 1431.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-05-23 14:44:05 -0500
+Started GET "/polizas" for ::1 at 2019-05-23 14:44:05 -0500
+Processing by PolizasController#index as HTML
+  Rendering polizas/index.html.erb within layouts/application
+  [1m[36mPoliza Load (199.2ms)[0m  [1m[34mSELECT "polizas".* FROM "polizas"[0m
+  ↳ app/views/polizas/index.html.erb:14
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"x", "password"=>"[FILTERED]", "email"=>"x@x.com", "rol"=>"Administrador", "user"=>{"username"=>"x", "password"=>"[FILTERED]", "rol"=>"Administrador", "email"=>"x@x.com"}}
+  Rendered polizas/index.html.erb within layouts/application (488.2ms)
+  [1m[35m (6.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31
+  [1m[36mUser Create (199.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "password", "rol", "email") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "x"], ["created_at", "2019-05-23 19:44:06.753058"], ["updated_at", "2019-05-23 19:44:06.753058"], ["password", "1234"], ["rol", "Administrador"], ["email", "x@x.com"]]
+  ↳ app/controllers/users_controller.rb:31
+  [1m[35m (66.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31
+Redirected to http://localhost:3000/users/18
+Completed 302 Found in 370ms (ActiveRecord: 981.8ms)
+
+
+Started GET "/users/18" for ::1 at 2019-05-23 14:44:07 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (205.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2120ms (Views: 1470.9ms | ActiveRecord: 477.3ms)
+
+
+Completed 200 OK in 948ms (Views: 485.6ms | ActiveRecord: 205.7ms)
+
+
+Started GET "/" for ::1 at 2019-05-23 14:57:58 -0500
+  [1m[35m (228.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+webpacker (4.0.2) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (48.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+Migrating to CreateSoatseguros (20190523195724)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (602.6ms)[0m  [1m[35mCREATE TABLE "soatseguros" ("id" bigserial primary key, "Placa" character varying, "del" character varying, "vehiculo" character varying, "Fecha" character varying, "inicio" character varying, "vigencia" character varying, "fin" character varying, "Numero" character varying, "pasajeros" integer, "Cilindraje" integer, "Clase" character varying, "Toneladas" integer, "Edad" integer, "Precio" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190523195724_create_soatseguros.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190523195724"]]
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (20.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (85.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+Started GET "/" for ::1 at 2019-05-23 15:14:16 -0500
+  [1m[35m (58.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (60065.1ms)
+Completed 200 OK in 68080ms (Views: 67934.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users.json" for ::1 at 2019-05-23 15:15:47 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (66.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered users/_user.json.jbuilder (1.3ms)
+  Rendered users/_user.json.jbuilder (0.4ms)
+  Rendered users/_user.json.jbuilder (0.3ms)
+  Rendered users/_user.json.jbuilder (0.3ms)
+  Rendered users/index.json.jbuilder (325.1ms)
+Completed 200 OK in 389ms (Views: 115.3ms | ActiveRecord: 1212.7ms)
+
+
+Started GET "/soatseguros" for ::1 at 2019-05-23 15:15:49 -0500
+Processing by SoatsegurosController#index as HTML
+  Rendering soatseguros/index.html.erb within layouts/application
+  [1m[36mSoatseguro Load (41.6ms)[0m  [1m[34mSELECT "soatseguros".* FROM "soatseguros"[0m
+  ↳ app/views/soatseguros/index.html.erb:29
+  Rendered soatseguros/index.html.erb within layouts/application (49.9ms)
+Completed 200 OK in 677ms (Views: 488.9ms | ActiveRecord: 44.8ms)
+
+
+Started GET "/soatseguros/new" for ::1 at 2019-05-23 15:15:59 -0500
+Processing by SoatsegurosController#new as HTML
+  Rendering soatseguros/new.html.erb within layouts/application
+  Rendered soatseguros/_form.html.erb (100.6ms)
+  Rendered soatseguros/new.html.erb within layouts/application (146.1ms)
+Completed 200 OK in 724ms (Views: 587.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2019-05-23 15:37:48 -0500
+  [1m[35m (57.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+webpacker (4.0.2) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (61.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+Migrating to CreateSeguros (20190523203034)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (280.1ms)[0m  [1m[35mCREATE TABLE "seguros" ("id" bigserial primary key, "Placa_del_vehiculo" character varying, "Fecha_inicio_vigencia" character varying, "Fecha_fin_vigencia" character varying, "Numero_pasajeros" integer, "Cilindraje" integer, "Clase" character varying, "Toneladas" integer, "Edad" integer, "Precio" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190523203034_create_seguros.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (38.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190523203034"]]
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (37.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (26.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/bin/rake:23
+Started GET "/" for ::1 at 2019-05-23 15:40:41 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (159827.5ms)
+Completed 200 OK in 169148ms (Views: 169101.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users.json" for ::1 at 2019-05-23 15:51:47 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (46.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered users/_user.json.jbuilder (2.2ms)
+  Rendered users/_user.json.jbuilder (0.4ms)
+  Rendered users/_user.json.jbuilder (0.4ms)
+  Rendered users/_user.json.jbuilder (0.5ms)
+  Rendered users/index.json.jbuilder (136.9ms)
+Completed 200 OK in 252ms (Views: 98.0ms | ActiveRecord: 482.7ms)
+
+
+Started GET "/seguros" for ::1 at 2019-05-23 15:51:48 -0500
+Processing by SegurosController#index as HTML
+  Rendering seguros/index.html.erb within layouts/application
+  [1m[36mSeguro Load (40.4ms)[0m  [1m[34mSELECT "seguros".* FROM "seguros"[0m
+  ↳ app/views/seguros/index.html.erb:22
+  Rendered seguros/index.html.erb within layouts/application (47.4ms)
+Completed 200 OK in 1158ms (Views: 1025.4ms | ActiveRecord: 43.3ms)
+
+
+Started GET "/seguros/new" for ::1 at 2019-05-23 15:51:55 -0500
+Processing by SegurosController#new as HTML
+  Rendering seguros/new.html.erb within layouts/application
+  Rendered seguros/_form.html.erb (61.8ms)
+  Rendered seguros/new.html.erb within layouts/application (79.8ms)
+Completed 200 OK in 250ms (Views: 155.8ms | ActiveRecord: 24.8ms)
+
+
+Started GET "/seguros" for ::1 at 2019-05-23 15:52:02 -0500
+Processing by SegurosController#index as HTML
+  Rendering seguros/index.html.erb within layouts/application
+  [1m[36mSeguro Load (34.1ms)[0m  [1m[34mSELECT "seguros".* FROM "seguros"[0m
+  ↳ app/views/seguros/index.html.erb:22
+  Rendered seguros/index.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 115ms (Views: 77.0ms | ActiveRecord: 34.1ms)
+
+
+Started GET "/" for ::1 at 2019-05-23 15:52:43 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+Started GET "/" for ::1 at 2019-05-23 15:52:46 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (59351.4ms)
+  Rendered pages/index.html.erb within layouts/application (55716.0ms)
+Completed 200 OK in 57251ms (Views: 57247.6ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 61069ms (Views: 60936.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users.json" for ::1 at 2019-05-23 15:53:51 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered users/_user.json.jbuilder (3.6ms)
+  Rendered users/_user.json.jbuilder (1.4ms)
+  Rendered users/_user.json.jbuilder (0.4ms)
+  Rendered users/_user.json.jbuilder (0.3ms)
+  Rendered users/index.json.jbuilder (37.0ms)
+Completed 200 OK in 87ms (Views: 47.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/seguros/new" for ::1 at 2019-05-23 15:53:52 -0500
+Processing by SegurosController#new as HTML
+  Rendering seguros/new.html.erb within layouts/application
+  Rendered seguros/_form.html.erb (81.6ms)
+  Rendered seguros/new.html.erb within layouts/application (111.6ms)
+Completed 200 OK in 349ms (Views: 251.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/seguros" for ::1 at 2019-05-23 15:53:57 -0500
+Processing by SegurosController#index as HTML
+  Rendering seguros/index.html.erb within layouts/application
+  [1m[36mSeguro Load (0.4ms)[0m  [1m[34mSELECT "seguros".* FROM "seguros"[0m
+  ↳ app/views/seguros/index.html.erb:22
+  Rendered seguros/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 100ms (Views: 74.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-05-23 15:54:06 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 175ms (Views: 80.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-05-23 15:54:28 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"Admin", "password"=>"[FILTERED]", "email"=>"a@a.com", "rol"=>"Administrador", "user"=>{"username"=>"Admin", "password"=>"[FILTERED]", "rol"=>"Administrador", "email"=>"a@a.com"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31
+  [1m[36mUser Create (225.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "password", "rol", "email") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Admin"], ["created_at", "2019-05-23 20:54:28.717644"], ["updated_at", "2019-05-23 20:54:28.717644"], ["password", "4321"], ["rol", "Administrador"], ["email", "a@a.com"]]
+  ↳ app/controllers/users_controller.rb:31
+Started GET "/polizas" for ::1 at 2019-05-23 15:54:28 -0500
+Processing by PolizasController#index as HTML
+  [1m[35m (200.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31
+Redirected to http://localhost:3000/users/19
+Completed 302 Found in 439ms (ActiveRecord: 425.7ms)
+
+
+Started GET "/users/19" for ::1 at 2019-05-23 15:54:29 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68
+  Rendering polizas/index.html.erb within layouts/application
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+  [1m[36mPoliza Load (132.0ms)[0m  [1m[34mSELECT "polizas".* FROM "polizas"[0m
+  ↳ app/views/polizas/index.html.erb:14
+Completed 200 OK in 219ms (Views: 117.3ms | ActiveRecord: 0.6ms)
+
+
+  Rendered polizas/index.html.erb within layouts/application (508.7ms)
+Completed 200 OK in 763ms (Views: 100.4ms | ActiveRecord: 496.6ms)
+
+
+Started GET "/" for ::1 at 2019-05-23 15:54:39 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 123ms (Views: 118.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users.json" for ::1 at 2019-05-23 15:55:00 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered users/_user.json.jbuilder (0.8ms)
+  Rendered users/_user.json.jbuilder (0.3ms)
+  Rendered users/_user.json.jbuilder (0.2ms)
+  Rendered users/_user.json.jbuilder (0.2ms)
+  Rendered users/_user.json.jbuilder (0.3ms)
+  Rendered users/index.json.jbuilder (9.7ms)
+Completed 200 OK in 23ms (Views: 19.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/seguros" for ::1 at 2019-05-23 15:55:00 -0500
+Processing by SegurosController#index as HTML
+  Rendering seguros/index.html.erb within layouts/application
+  [1m[36mSeguro Load (0.6ms)[0m  [1m[34mSELECT "seguros".* FROM "seguros"[0m
+  ↳ app/views/seguros/index.html.erb:22
+  Rendered seguros/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 92ms (Views: 87.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-05-23 15:56:37 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+Started GET "/" for ::1 at 2019-05-23 15:56:41 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+[Webpacker] Compiled all packs in /Users/mac/Desktop/SOAT_CNPX/public/packs
+  Rendered pages/index.html.erb within layouts/application (49688.0ms)
+  Rendered pages/index.html.erb within layouts/application (53405.7ms)
+Completed 200 OK in 54763ms (Views: 54714.1ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 50953ms (Views: 50948.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-05-23 15:57:59 -0500
+Started GET "/seguros/new" for ::1 at 2019-05-23 15:57:59 -0500
+Processing by SegurosController#new as HTML
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"Usr1", "password"=>"[FILTERED]", "email"=>"u@u.com", "rol"=>"Cliente", "user"=>{"username"=>"Usr1", "password"=>"[FILTERED]", "rol"=>"Cliente", "email"=>"u@u.com"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at", "password", "rol", "email") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Usr1"], ["created_at", "2019-05-23 20:57:59.738436"], ["updated_at", "2019-05-23 20:57:59.738436"], ["password", "1234"], ["rol", "Cliente"], ["email", "u@u.com"]]
+  ↳ app/controllers/users_controller.rb:31
+  [1m[35m (13.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31
+Redirected to http://localhost:3000/users/20
+Completed 302 Found in 23ms (ActiveRecord: 14.1ms)
+
+
+Started GET "/users/20" for ::1 at 2019-05-23 15:57:59 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68
+  Rendering seguros/new.html.erb within layouts/application
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 269ms (Views: 124.6ms | ActiveRecord: 0.4ms)
+
+
+  Rendered seguros/_form.html.erb (83.9ms)
+  Rendered seguros/new.html.erb within layouts/application (129.1ms)
+Completed 200 OK in 453ms (Views: 322.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/seguros" for ::1 at 2019-05-23 15:58:35 -0500
+Processing by SegurosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HagFJoUTJdZK4M60KbwsYG4+HkX3caLiDQjoU88L9YMAT6XG10zg6nQlhZNnugqpIKXJUBAQJ5+R2hRqKn/Zdg==", "seguro"=>{"Placa_del_vehiculo"=>"p1", "Fecha_inicio_vigencia"=>"fi1", "Fecha_fin_vigencia"=>"ff1", "Numero_pasajeros"=>"1", "Cilindraje"=>"1", "Clase"=>"c1", "Toneladas"=>"1", "Edad"=>"1", "Precio"=>"1"}, "commit"=>"Create Seguro"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/seguros_controller.rb:30
+  [1m[36mSeguro Create (27.8ms)[0m  [1m[32mINSERT INTO "seguros" ("Placa_del_vehiculo", "Fecha_inicio_vigencia", "Fecha_fin_vigencia", "Numero_pasajeros", "Cilindraje", "Clase", "Toneladas", "Edad", "Precio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["Placa_del_vehiculo", "p1"], ["Fecha_inicio_vigencia", "fi1"], ["Fecha_fin_vigencia", "ff1"], ["Numero_pasajeros", 1], ["Cilindraje", 1], ["Clase", "c1"], ["Toneladas", 1], ["Edad", 1], ["Precio", "1"], ["created_at", "2019-05-23 20:58:35.107944"], ["updated_at", "2019-05-23 20:58:35.107944"]]
+  ↳ app/controllers/seguros_controller.rb:30
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/seguros_controller.rb:30
+Redirected to http://localhost:3000/seguros/1
+Completed 302 Found in 37ms (ActiveRecord: 29.2ms)
+
+
+Started GET "/seguros/1" for ::1 at 2019-05-23 15:58:35 -0500
+Processing by SegurosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSeguro Load (0.6ms)[0m  [1m[34mSELECT  "seguros".* FROM "seguros" WHERE "seguros"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/seguros_controller.rb:67
+  Rendering seguros/show.html.erb within layouts/application
+  Rendered seguros/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 131ms (Views: 75.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/seguros" for ::1 at 2019-05-23 15:58:51 -0500
+Processing by SegurosController#index as HTML
+  Rendering seguros/index.html.erb within layouts/application
+  [1m[36mSeguro Load (0.6ms)[0m  [1m[34mSELECT "seguros".* FROM "seguros"[0m
+  ↳ app/views/seguros/index.html.erb:22
+  Rendered seguros/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 119ms (Views: 72.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-05-23 16:00:40 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (88.1ms)
+Completed 200 OK in 264ms (Views: 176.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users.json" for ::1 at 2019-05-23 16:00:50 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered users/_user.json.jbuilder (1.6ms)
+  Rendered users/_user.json.jbuilder (0.4ms)
+  Rendered users/_user.json.jbuilder (0.3ms)
+  Rendered users/_user.json.jbuilder (0.6ms)
+  Rendered users/_user.json.jbuilder (0.8ms)
+  Rendered users/_user.json.jbuilder (0.7ms)
+  Rendered users/index.json.jbuilder (39.1ms)
+Completed 200 OK in 68ms (Views: 48.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/seguros/new" for ::1 at 2019-05-23 16:00:50 -0500
+Processing by SegurosController#new as HTML
+  Rendering seguros/new.html.erb within layouts/application
+  Rendered seguros/_form.html.erb (20.6ms)
+  Rendered seguros/new.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 130ms (Views: 126.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/seguros" for ::1 at 2019-05-23 16:01:10 -0500
+Processing by SegurosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wvCP8cJCq4pJRD8Q0WSdUJVUsbrrq02kLEBn30WxtmPfFy8RkB1utneBdDefYruZ289mrwzKyNmwkpvmoMWalg==", "seguro"=>{"Placa_del_vehiculo"=>"p2", "Fecha_inicio_vigencia"=>"fi2", "Fecha_fin_vigencia"=>"ff2", "Numero_pasajeros"=>"2", "Cilindraje"=>"2", "Clase"=>"c2", "Toneladas"=>"2", "Edad"=>"2", "Precio"=>"2"}, "commit"=>"Create Seguro"}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/seguros_controller.rb:30
+  [1m[36mSeguro Create (0.7ms)[0m  [1m[32mINSERT INTO "seguros" ("Placa_del_vehiculo", "Fecha_inicio_vigencia", "Fecha_fin_vigencia", "Numero_pasajeros", "Cilindraje", "Clase", "Toneladas", "Edad", "Precio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["Placa_del_vehiculo", "p2"], ["Fecha_inicio_vigencia", "fi2"], ["Fecha_fin_vigencia", "ff2"], ["Numero_pasajeros", 2], ["Cilindraje", 2], ["Clase", "c2"], ["Toneladas", 2], ["Edad", 2], ["Precio", "2"], ["created_at", "2019-05-23 21:01:10.461108"], ["updated_at", "2019-05-23 21:01:10.461108"]]
+  ↳ app/controllers/seguros_controller.rb:30
+  [1m[35m (41.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/seguros_controller.rb:30
+Redirected to http://localhost:3000/seguros/2
+Completed 302 Found in 50ms (ActiveRecord: 42.8ms)
+
+
+Started GET "/seguros/2" for ::1 at 2019-05-23 16:01:10 -0500
+Processing by SegurosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSeguro Load (0.3ms)[0m  [1m[34mSELECT  "seguros".* FROM "seguros" WHERE "seguros"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/seguros_controller.rb:67
+  Rendering seguros/show.html.erb within layouts/application
+  Rendered seguros/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 75ms (Views: 69.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/seguros/new" for ::1 at 2019-05-23 16:01:19 -0500
+Processing by SegurosController#new as HTML
+  Rendering seguros/new.html.erb within layouts/application
+  Rendered seguros/_form.html.erb (33.8ms)
+  Rendered seguros/new.html.erb within layouts/application (38.3ms)
+Completed 200 OK in 113ms (Views: 108.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-23 16:01:25 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 88ms (Views: 83.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users.json" for ::1 at 2019-05-23 16:01:35 -0500
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered users/_user.json.jbuilder (0.9ms)
+  Rendered users/_user.json.jbuilder (0.2ms)
+  Rendered users/_user.json.jbuilder (0.3ms)
+  Rendered users/_user.json.jbuilder (0.4ms)
+  Rendered users/_user.json.jbuilder (0.3ms)
+  Rendered users/_user.json.jbuilder (0.2ms)
+  Rendered users/index.json.jbuilder (12.4ms)
+Completed 200 OK in 24ms (Views: 20.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/seguros" for ::1 at 2019-05-23 16:01:35 -0500
+Processing by SegurosController#index as HTML
+  Rendering seguros/index.html.erb within layouts/application
+  [1m[36mSeguro Load (0.5ms)[0m  [1m[34mSELECT "seguros".* FROM "seguros"[0m
+  ↳ app/views/seguros/index.html.erb:22
+  Rendered seguros/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 92ms (Views: 86.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/seguros" for ::1 at 2019-05-23 16:02:09 -0500
+Processing by SegurosController#index as HTML
+  Rendering seguros/index.html.erb within layouts/application
+  [1m[36mSeguro Load (0.5ms)[0m  [1m[34mSELECT "seguros".* FROM "seguros"[0m
+  ↳ app/views/seguros/index.html.erb:22
+  Rendered seguros/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 311ms (Views: 266.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/seguros" for ::1 at 2019-05-23 16:02:25 -0500
+Processing by SegurosController#index as HTML
+  Rendering seguros/index.html.erb within layouts/application
+  [1m[36mSeguro Load (0.4ms)[0m  [1m[34mSELECT "seguros".* FROM "seguros"[0m
+  ↳ app/views/seguros/index.html.erb:22
+  Rendered seguros/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 100ms (Views: 69.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/seguros.json" for ::1 at 2019-05-23 16:02:30 -0500
+Processing by SegurosController#index as JSON
+  Rendering seguros/index.json.jbuilder
+  [1m[36mSeguro Load (0.5ms)[0m  [1m[34mSELECT "seguros".* FROM "seguros"[0m
+  ↳ app/views/seguros/index.json.jbuilder:1
+  Rendered seguros/_seguro.json.jbuilder (1.1ms)
+  Rendered seguros/_seguro.json.jbuilder (0.7ms)
+  Rendered seguros/index.json.jbuilder (170.8ms)
+Completed 200 OK in 403ms (Views: 325.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/seguros" for ::1 at 2019-05-23 16:02:34 -0500
+Processing by SegurosController#index as HTML
+  Rendering seguros/index.html.erb within layouts/application
+  [1m[36mSeguro Load (0.4ms)[0m  [1m[34mSELECT "seguros".* FROM "seguros"[0m
+  ↳ app/views/seguros/index.html.erb:22
+  Rendered seguros/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 84ms (Views: 79.6ms | ActiveRecord: 0.4ms)
+
+
