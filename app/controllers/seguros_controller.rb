@@ -1,4 +1,7 @@
 class SegurosController < ApplicationController
+  def detail
+  end
+
   before_action :set_seguro, only: [:show, :edit, :update, :destroy]
 
   # GET /seguros

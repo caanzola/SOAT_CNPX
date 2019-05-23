@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'seguros/detail'
   resources :soatseguros
   resources :seguros
   resources :polizas
