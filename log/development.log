@@ -2900,3 +2900,690 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-05-22 22:27:54 -0500
+  [1m[35m (229.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (905.3ms)
+Completed 200 OK in 1024ms (Views: 910.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 22:28:04 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (39.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 61ms (Views: 10.2ms | ActiveRecord: 45.8ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 22:28:07 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (302.0ms)
+Completed 200 OK in 312ms (Views: 307.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 22:34:03 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (553.4ms)
+Completed 200 OK in 628ms (Views: 557.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 22:34:11 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb
+  [1m[36mUser Load (14.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb (243.7ms)
+Completed 200 OK in 321ms (Views: 8.0ms | ActiveRecord: 239.1ms)
+
+
+Started GET "/users.json" for ::1 at 2019-05-22 22:34:18 -0500
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered users/index.json.jbuilder (3.5ms)
+Completed 200 OK in 54ms (Views: 6.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 22:34:22 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb (3.1ms)
+Completed 200 OK in 9ms (Views: 5.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2019-05-22 22:34:37 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"Felipe", "user"=>{"username"=>"Felipe"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31
+  [1m[36mUser Create (86.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "Felipe"], ["created_at", "2019-05-23 03:34:37.959904"], ["updated_at", "2019-05-23 03:34:37.959904"]]
+  ↳ app/controllers/users_controller.rb:31
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 214ms (ActiveRecord: 645.7ms)
+
+
+Started GET "/users/1" for ::1 at 2019-05-22 22:34:38 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb
+  Rendered users/show.html.erb (0.9ms)
+Completed 200 OK in 185ms (Views: 35.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 22:34:43 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb (2.4ms)
+Completed 200 OK in 10ms (Views: 5.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-22 22:35:39 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/_form.html.erb (793.3ms)
+  Rendered users/new.html.erb (806.5ms)
+Completed 500 Internal Server Error in 867ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `protect_against_forgery?' for #<#<Class:0x00007ff919bb09f8>:0x00007ff916a70690>):
+    1: <%= form_with(model: user, local: true) do |form| %>
+    2:   <% if user.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___4135389433284851584_70353901831500'
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__1090931827593904000_70353901815900'
+Started GET "/users/new" for ::1 at 2019-05-22 22:35:49 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/_form.html.erb (371.1ms)
+  Rendered users/new.html.erb (373.9ms)
+Completed 500 Internal Server Error in 383ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `protect_against_forgery?' for #<#<Class:0x00007ff919bb09f8>:0x00007ff919ae4b50>):
+    1: <%= form_with(model: user, local: true) do |form| %>
+    2:   <% if user.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___4135389433284851584_70353901331380'
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__1090931827593904000_70353927219920'
+Started GET "/users" for ::1 at 2019-05-22 22:37:59 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb (2.8ms)
+Completed 200 OK in 30ms (Views: 5.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for ::1 at 2019-05-22 22:38:01 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb
+  Rendered users/show.html.erb (1.0ms)
+Completed 200 OK in 47ms (Views: 4.8ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-05-22 22:38:06 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/edit.html.erb
+  Rendered users/_form.html.erb (355.8ms)
+  Rendered users/edit.html.erb (360.2ms)
+Completed 500 Internal Server Error in 445ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `protect_against_forgery?' for #<#<Class:0x00007ff919bb09f8>:0x00007ff91a279be0>):
+    1: <%= form_with(model: user, local: true) do |form| %>
+    2:   <% if user.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___4135389433284851584_70353927407560'
+app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__4466679112568119995_70353931195180'
+Started GET "/users/1/edit" for ::1 at 2019-05-22 22:38:12 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/edit.html.erb
+  Rendered users/_form.html.erb (323.3ms)
+  Rendered users/edit.html.erb (326.2ms)
+Completed 500 Internal Server Error in 335ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `protect_against_forgery?' for #<#<Class:0x00007ff919bb09f8>:0x00007ff9199bb7d8>):
+    1: <%= form_with(model: user, local: true) do |form| %>
+    2:   <% if user.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___4135389433284851584_70353897573600'
+app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__4466679112568119995_70353930233620'
+Started GET "/" for ::1 at 2019-05-22 22:51:22 -0500
+  [1m[35m (390.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+Started GET "/" for ::1 at 2019-05-22 22:51:26 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (853.3ms)
+Completed 200 OK in 948ms (Views: 857.6ms | ActiveRecord: 0.0ms)
+
+
+  Rendered pages/index.html.erb (329.3ms)
+Completed 200 OK in 346ms (Views: 343.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 22:51:37 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb
+  [1m[36mUser Load (48.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb (126.1ms)
+Completed 200 OK in 165ms (Views: 13.7ms | ActiveRecord: 116.3ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-22 22:51:43 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/_form.html.erb (749.0ms)
+  Rendered users/new.html.erb (760.4ms)
+Completed 500 Internal Server Error in 814ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `protect_against_forgery?' for #<#<Class:0x00007fddf49582b8>:0x00007fddf458a190>):
+    1: <%= form_with(model: user, local: true) do |form| %>
+    2:   <% if user.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__1703897812288238428_70295630759940'
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__3773182575463701009_70295631975900'
+Started GET "/users" for ::1 at 2019-05-22 22:51:48 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb (4.0ms)
+Completed 200 OK in 13ms (Views: 7.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-22 22:55:15 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/new.html.erb (0.8ms)
+Completed 200 OK in 8ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-22 22:57:09 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/_form.html.erb (512.1ms)
+  Rendered users/new.html.erb (532.9ms)
+Completed 500 Internal Server Error in 542ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `protect_against_forgery?' for #<#<Class:0x00007fddf49582b8>:0x00007fddf45e40a0>):
+    1: <%= form_with(model: user, local: true) do |form| %>
+    2:   <% if user.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__1703897812288238428_70295604813900'
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__3773182575463701009_70295632160100'
+Started GET "/users/new" for ::1 at 2019-05-22 22:57:19 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/new.html.erb (1.5ms)
+Completed 200 OK in 11ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 22:57:21 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb (3.0ms)
+Completed 200 OK in 29ms (Views: 5.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-22 22:57:23 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/new.html.erb (0.6ms)
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 22:57:24 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb (2.9ms)
+Completed 200 OK in 11ms (Views: 6.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 22:57:39 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb (2.8ms)
+Completed 200 OK in 20ms (Views: 6.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-22 22:57:41 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/_form.html.erb (776.6ms)
+  Rendered users/new.html.erb (797.9ms)
+Completed 500 Internal Server Error in 806ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00007fddf49582b8>:0x00007fddf22305c8>
+Did you mean?  @user):
+    1: <%= form_with(model: user, local: true) do |form| %>
+    2:   <% if user.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__1703897812288238428_70295613383140'
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__3773182575463701009_70295613442040'
+Started GET "/users/new" for ::1 at 2019-05-22 22:58:50 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/_form.html.erb (339.1ms)
+  Rendered users/new.html.erb (343.0ms)
+Completed 500 Internal Server Error in 391ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `protect_against_forgery?' for #<#<Class:0x00007fddf49582b8>:0x00007fddf4c29f00>):
+    1: <%= form_with(model: user, local: true) do |form| %>
+    2:   <% if user.errors.any? %>
+    3:     <div id="error_explanation">
+    4:      
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__1703897812288238428_70295613312620'
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__3773182575463701009_70295635449040'
+Started GET "/users/new" for ::1 at 2019-05-22 22:59:03 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/_form.html.erb (556.4ms)
+  Rendered users/new.html.erb (561.9ms)
+Completed 500 Internal Server Error in 572ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `protect_against_forgery?' for #<#<Class:0x00007fddf49582b8>:0x00007fddf4531d88>):
+    1: <%= form_with(model: user, local: true) do |form| %>
+    2:   <% if user.errors.any? %>
+    3:     
+    4:   <% end %>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__1703897812288238428_70295634378680'
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__3773182575463701009_70295631795940'
+Started GET "/users/new" for ::1 at 2019-05-22 22:59:15 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/_form.html.erb (0.9ms)
+  Rendered users/new.html.erb (4.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/mac/Desktop/SOAT_CNPX/app/views/users/_form.html.erb:15: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/users/_form.html.erb:15: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__3773182575463701009_70295604659440'
+Started GET "/users/new" for ::1 at 2019-05-22 22:59:24 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/_form.html.erb (1.0ms)
+  Rendered users/new.html.erb (25.0ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/mac/Desktop/SOAT_CNPX/app/views/users/_form.html.erb:13: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/users/_form.html.erb:13: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__3773182575463701009_70295634345040'
+Started GET "/users/new" for ::1 at 2019-05-22 22:59:36 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/_form.html.erb (0.3ms)
+  Rendered users/new.html.erb (4.6ms)
+Completed 200 OK in 13ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-22 22:59:54 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/_form.html.erb (453.5ms)
+  Rendered users/new.html.erb (477.3ms)
+Completed 500 Internal Server Error in 482ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `protect_against_forgery?' for #<#<Class:0x00007fddf49582b8>:0x00007fddf445bbc0>):
+    1: <%= form_with(model: user, local: true) do |form| %>
+    2:   
+    3: 
+    4:   <div class="actions">
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__1703897812288238428_70295631336500'
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__3773182575463701009_70295631365040'
+Started GET "/users/new" for ::1 at 2019-05-22 23:00:03 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/_form.html.erb (599.0ms)
+  Rendered users/new.html.erb (609.7ms)
+Completed 500 Internal Server Error in 619ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `protect_against_forgery?' for #<#<Class:0x00007fddf49582b8>:0x00007fddf11093d0>):
+    1: <%= form_with(model: user, local: true) do |form| %>
+    2:   
+    3: <% end %>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__1703897812288238428_70295599631980'
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__3773182575463701009_70295604450160'
+Started GET "/users/new" for ::1 at 2019-05-22 23:00:54 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/_form.html.erb (4.6ms)
+  Rendered users/new.html.erb (8.6ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
+    1: <%= simple_form_for @User do |f| %>
+    2:   <% if user.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__1703897812288238428_70295632892200'
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__3773182575463701009_70295613392200'
+Started GET "/users/new" for ::1 at 2019-05-22 23:01:27 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/_form.html.erb (341.6ms)
+  Rendered users/new.html.erb (347.2ms)
+Completed 500 Internal Server Error in 392ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `protect_against_forgery?' for #<#<Class:0x00007fddf49582b8>:0x00007fddf1340e00>):
+    1: <%= simple_form_for @user do |f| %>
+    2:  
+    3:  
+    4: <% end %>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__1703897812288238428_70295605569160'
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__3773182575463701009_70295605611640'
+Started GET "/users/new" for ::1 at 2019-05-22 23:02:37 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/_form.html.erb (534.0ms)
+  Rendered users/new.html.erb (537.7ms)
+Completed 500 Internal Server Error in 557ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `protect_against_forgery?' for #<#<Class:0x00007fddf49582b8>:0x00007fddf49492b8>):
+    1: <%= simple_form_for @user do |f| %>
+    2:   <%=f.input :username, label: "username" %>
+    3: 
+    4: <% end %>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__1703897812288238428_70295630747380'
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__3773182575463701009_70295633940180'
+Started GET "/users/new" for ::1 at 2019-05-22 23:03:02 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/_form.html.erb (6.9ms)
+  Rendered users/new.html.erb (11.3ms)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
+    1: <%= simple_form_for @User do |f| %>
+    2:   <%=f.input :username, label: "username" %>
+    3: 
+    4: <% end %>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__1703897812288238428_70295630282420'
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__3773182575463701009_70295633347040'
+Started GET "/users/new" for ::1 at 2019-05-22 23:03:09 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/_form.html.erb (5.0ms)
+  Rendered users/new.html.erb (84.5ms)
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1..2)):
+    1: <%= simple_form_for do |f| %>
+    2:   <%=f.input :username, label: "username" %>
+    3: 
+    4: <% end %>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__1703897812288238428_70295630535320'
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__3773182575463701009_70295630482280'
+Started GET "/users/new" for ::1 at 2019-05-22 23:03:41 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/_form.html.erb (559.6ms)
+  Rendered users/new.html.erb (566.2ms)
+Completed 500 Internal Server Error in 574ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `protect_against_forgery?' for #<#<Class:0x00007fddf49582b8>:0x00007fddf4320f30>):
+    1: <%= simple_form_for @user do |f| %>
+    2:   <%=f.input :username, label: "username" %>
+    3: 
+    4: <% end %>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__1703897812288238428_70295633943360'
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__3773182575463701009_70295630711980'
+Started GET "/users/new" for ::1 at 2019-05-22 23:07:14 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.1ms)
+  Rendered users/new.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 11582ms (Views: 11514.2ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 23:07:34 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (57.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (60.4ms)
+Completed 200 OK in 140ms (Views: 69.7ms | ActiveRecord: 57.6ms)
+
+
+Started GET "/" for ::1 at 2019-05-22 23:07:48 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (701.1ms)
+Completed 200 OK in 861ms (Views: 806.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 23:07:55 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (46.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (48.9ms)
+Completed 200 OK in 165ms (Views: 83.4ms | ActiveRecord: 46.6ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-22 23:08:02 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.2ms)
+  Rendered users/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 72ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-05-22 23:08:09 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mASzl6RcWlVuTAKacP/rA47D13UIon+YgMtMzxTpT3tLykskC68XTcEk0VTA+T8hRbocG+8YiMnFihArgjIrQA==", "user"=>{"username"=>"Camilo"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:31
+  [1m[36mUser Create (35.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "Camilo"], ["created_at", "2019-05-23 04:08:09.376043"], ["updated_at", "2019-05-23 04:08:09.376043"]]
+  ↳ app/controllers/users_controller.rb:31
+  [1m[35m (41.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:31
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 111ms (ActiveRecord: 78.0ms)
+
+
+Started GET "/users/2" for ::1 at 2019-05-22 23:08:09 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 519ms (Views: 52.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 23:08:14 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (10.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 92ms (Views: 62.6ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/users/2/edit" for ::1 at 2019-05-22 23:08:26 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (9.8ms)
+  Rendered users/edit.html.erb within layouts/application (101.7ms)
+Completed 200 OK in 358ms (Views: 233.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/2" for ::1 at 2019-05-22 23:08:33 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 140ms (Views: 87.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 23:08:35 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 237ms (Views: 135.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/2/edit" for ::1 at 2019-05-22 23:08:37 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.1ms)
+  Rendered users/edit.html.erb within layouts/application (37.8ms)
+Completed 200 OK in 90ms (Views: 84.4ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/users/2" for ::1 at 2019-05-22 23:08:42 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tV3LHXFu5Ahl1RjLAj4i2BMCih2fkVbWJC8qN6VyiQLk7whZiLzel2EtitLLPVYcYI2eZlk6wWCP2IpcXp5ryw==", "user"=>{"username"=>"Camilo 2"}, "id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:45
+  [1m[36mUser Update (1096.1ms)[0m  [1m[33mUPDATE "users" SET "username" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["username", "Camilo 2"], ["updated_at", "2019-05-23 04:08:42.260198"], ["id", 2]]
+  ↳ app/controllers/users_controller.rb:45
+  [1m[35m (208.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:45
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 1314ms (ActiveRecord: 1305.5ms)
+
+
+Started GET "/users/2" for ::1 at 2019-05-22 23:08:43 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 55ms (Views: 50.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 23:08:46 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 50ms (Views: 46.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-22 23:08:55 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.6ms)
+  Rendered users/new.html.erb within layouts/application (73.9ms)
+Completed 200 OK in 230ms (Views: 179.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2019-05-22 23:10:17 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (6.9ms)
+  Rendered users/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 578ms (Views: 560.5ms | ActiveRecord: 0.0ms)
+
+
