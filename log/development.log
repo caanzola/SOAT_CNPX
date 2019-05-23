@@ -2544,3 +2544,19 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 16ms (Views: 11.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-05-22 19:09:20 -0500
+  [1m[35m (49.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb
+  Rendered pages/index.html.erb (372.4ms)
+Completed 200 OK in 482ms (Views: 445.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-05-22 19:10:01 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (57.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:9
+Completed 200 OK in 207ms (Views: 23.9ms | ActiveRecord: 131.5ms)
+
+
