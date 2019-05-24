@@ -127,7 +127,7 @@ listo(){
                     })
                     
                   })
-          window.location.replace("/seguros/new");
+          //window.location.replace("/seguros/new");
         }
         else
           window.location.replace("/seguros");

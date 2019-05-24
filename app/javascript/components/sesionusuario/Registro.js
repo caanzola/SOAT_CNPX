@@ -100,6 +100,28 @@ listo(){
   
       if(this.state.tipo === "Cliente")
       {
+
+            fetch('/users.json', {
+            method: 'get',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-CSRF-Token': Rails.csrfToken()
+            },
+            credentials: 'same-origin'
+          }).then(response => {
+            return response.json()
+      })
+      .then(data => {
+        // Work with JSON data here
+        
+        data.forEach((user) => {
+          
+
+          if(user.email === correo && user.password === clave)
+          {
+            
+            if(user.rol === "Cliente")
+            {
         fetch('/users.json', {
                         method: 'get',
                         headers: {
@@ -155,6 +177,11 @@ listo(){
                     })
                     
                   })
+                }
+            }
+
+          })
+        })
           window.location.replace("/seguros/new");
       }
         else
