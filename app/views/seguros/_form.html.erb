@@ -30,6 +30,9 @@
 <div id="b" class="form-actions">
 </div>
 
+<div id="c" class="form-actions">
+</div>
+
 
   <div id="a" class="form-actions">
 
@@ -92,7 +95,7 @@ placa = document.getElementById("seguro_Placa_del_vehiculo").value
             }
             else
             {
-              document.getElementById("a").getElementsByTagName("input")[0].value = "Solicitar"
+              
                 //document.getElementById("a").getElementsByTagName("input")[0].type = "submit"  
 
             if(document.getElementById("b").getElementsByTagName("input")[0] !== undefined)
@@ -116,6 +119,9 @@ placa = document.getElementById("seguro_Placa_del_vehiculo").value
               telefono = document.getElementById("b").getElementsByTagName("input")[5].value
               console.log("telefono")
               console.log(telefono)
+
+              document.getElementById("a").getElementsByTagName("input")[0].value = "Solicitar"
+              document.getElementById("a").getElementsByTagName("input")[0].type = "submit" 
 
     
     fetch('/users.json', {
@@ -158,7 +164,49 @@ placa = document.getElementById("seguro_Placa_del_vehiculo").value
     })
   })
 
-              document.getElementById("a").getElementsByTagName("input")[0].type = "submit"
+console.log("lol")
+  console.log(document.getElementById("c").getElementsByTagName("input").length)
+
+  
+
+    if(document.getElementById("c").getElementsByTagName("input").length === 0)
+    {
+      document.getElementById("c").innerHTML ="<h4>DATOS PARA LA TRANSACCIÓN</h4> <br><form>Número de tarjeta de crédito:<br><input type=\"text\"name=\"numTarjeta\"><br>Nombre del titular:<br><input type=\"text\" name=\"nombreTitular\"> <br>Fecha de vencimiento de la tarjeta:<br><input type=\"text\" name=\"fechaVencimiento\">  <br>Código de seguridad de la tarjeta (CVV):<br><input type=\"text\" name=\"codigoSeguridad\"> <br>Número de cuotas:<br><input type=\"text\" name=\"numCuotas\"> </form><br><br>"
+    }
+    else{
+      numTarjeta = document.getElementById("c").getElementsByTagName("input")[0].value
+              console.log("numTarjeta")
+              console.log(numTarjeta)
+              nombreTitular = document.getElementById("c").getElementsByTagName("input")[1].value
+              console.log("nombreTitular")
+              console.log(nombreTitular)
+              fechaVencimiento = document.getElementById("c").getElementsByTagName("input")[2].value
+              console.log("fechaVencimiento")
+              console.log(fechaVencimiento)
+              codigoSeguridad = document.getElementById("c").getElementsByTagName("input")[3].value
+              console.log("codigoSeguridad")
+              console.log(codigoSeguridad)
+              numCuotas = document.getElementById("c").getElementsByTagName("input")[4].value
+              console.log("numCuotas")
+              console.log(numCuotas)
+
+              fetch('/compras', {
+                method: 'post',
+                body: JSON.stringify({Numero_tarjeta:numTarjeta, Nombre_titular:nombreTitular, Fecha_de_vencimiento_tarjeta:fechaVencimiento, Codigo_seguridad:codigoSeguridad, Numero_cuotas:numCuotas, Placa_asociada:placa}),
+                headers: {
+                  'Content-Type': 'application/json',
+                  'X-CSRF-Token': Rails.csrfToken()
+                },
+                credentials: 'same-origin'
+              }).then(function(response) {
+                //return response.json();
+              }).then(function(data) {
+                console.log(data);
+              })
+             
+    }         
+              
+  //
 
             }
             else

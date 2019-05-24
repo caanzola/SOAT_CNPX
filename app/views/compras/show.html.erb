@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Numero tarjeta:</strong>
+  <%= @compra.Numero_tarjeta %>
+</p>
+
+<p>
+  <strong>Nombre titular:</strong>
+  <%= @compra.Nombre_titular %>
+</p>
+
+<p>
+  <strong>Fecha de vencimiento tarjeta:</strong>
+  <%= @compra.Fecha_de_vencimiento_tarjeta %>
+</p>
+
+<p>
+  <strong>Codigo seguridad:</strong>
+  <%= @compra.Codigo_seguridad %>
+</p>
+
+<p>
+  <strong>Numero cuotas:</strong>
+  <%= @compra.Numero_cuotas %>
+</p>
+
+<%= link_to 'Edit', edit_compra_path(@compra) %> |
+<%= link_to 'Back', compras_path %>

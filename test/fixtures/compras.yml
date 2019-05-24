@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Numero_tarjeta: 1
+  Nombre_titular: MyString
+  Fecha_de_vencimiento_tarjeta: MyString
+  Codigo_seguridad: 1
+  Numero_cuotas: 1
+
+two:
+  Numero_tarjeta: 1
+  Nombre_titular: MyString
+  Fecha_de_vencimiento_tarjeta: MyString
+  Codigo_seguridad: 1
+  Numero_cuotas: 1

@@ -1,9 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<div id = "placa">
+ 
+ <p>
   <strong>Placa del vehiculo:</strong>
   <%= @seguro.Placa_del_vehiculo %>
-</p>
+</p> 
+
+</div>
+
 
 <p>
   <strong>Fecha inicio vigencia:</strong>
@@ -44,4 +49,80 @@
   <strong>Precio:</strong>
   <%= @seguro.Precio %>
 </p>
+
+
+<script>
+
+  fetch('/compras.json', {
+        method: 'get',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': Rails.csrfToken()
+        },
+        credentials: 'same-origin'
+      }).then(response => {
+        return response.json()
+  })
+  .then(data => {
+    // Work with JSON data here
+    
+    //console.log(data);
+    
+    data.forEach((compra) => {
+      
+
+      fetch('/seguros.json', {
+        method: 'get',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': Rails.csrfToken()
+        },
+        credentials: 'same-origin'
+      }).then(response => {
+        return response.json()
+      })
+      .then(data => {
+        // Work with JSON data here
+        
+        //console.log(data);
+        
+        data.forEach((seguro) => {
+      
+
+      plac = document.getElementById("placa").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+      
+      console.log(plac)
+      console.log("vs")
+      console.log(seguro.Placa_del_vehiculo)
+
+
+      if(plac === seguro.Placa_del_vehiculo)
+      {
+
+        console.log("SIKAS")
+
+        fetch('/compras/'+compra.id, {
+            method: 'put',
+            body: JSON.stringify({id_seguro:seguro.id}),
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json',
+              'X-CSRF-Token': Rails.csrfToken()
+            },
+            credentials: 'same-origin'
+          }).then(function(response) {
+            return response.json();
+          }).then(function(data) {
+            console.log(data);
+          }) 
+      }
+      
+      
+        })
+      })  
+
+    })
+  })    
+
+</script>
 

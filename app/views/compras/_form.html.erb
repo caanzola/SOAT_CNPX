@@ -1,0 +1,17 @@
+
+<%= simple_form_for(@compra) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :Numero_tarjeta %>
+    <%= f.input :Nombre_titular %>
+    <%= f.input :Fecha_de_vencimiento_tarjeta %>
+    <%= f.input :Codigo_seguridad %>
+    <%= f.input :Numero_cuotas %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
