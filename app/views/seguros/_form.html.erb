@@ -3,7 +3,13 @@
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <div class="form-inputs">
+  
+
+
+  <div id = "s" class="form-inputs">
+    <h4>DATOS DEL VEHÍCULO</h4>
+    
+    <br>
     <%= f.input :Placa_del_vehiculo %>
     <%= f.input :Fecha_inicio_vigencia %>
     <%= f.input :Fecha_fin_vigencia %>
@@ -13,9 +19,205 @@
     <%= f.input :Toneladas %>
     <%= f.input :Edad %>
     <%= f.input :Precio %>
+
+
+
+
+
+
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+<div id="b" class="form-actions">
+</div>
+
+
+  <div id="a" class="form-actions">
+
+
+<%= submit_tag 'Validar', :type => 'button' %>
+
+  <script>
+
+
+   document.getElementById("a").getElementsByTagName("input")[0].addEventListener('click', function(){
+      //do stuff here
+      encontramos = ""
+
+      
+      
+placa = document.getElementById("seguro_Placa_del_vehiculo").value
+    console.log(placa)
+
+    if(placa ==="")
+    {
+
+      alert("Placa vacia")
+    }
+    else
+    {
+      
+        fetch('/seguros.json', {
+        method: 'get',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': Rails.csrfToken()
+        },
+        credentials: 'same-origin'
+                }).then(response => {
+                  return response.json()
+            })
+            .then(data => {
+              // Work with JSON data here
+              
+              //console.log(data)
+              
+
+              data.forEach((seguro) => {
+
+                //console.log(seguro.Placa_del_vehiculo)
+                if(seguro.Placa_del_vehiculo === placa)
+                {
+                  encontramos = "si"
+                 // alert("Ya hay un SOAT asociado a esta placa ",placa)
+                  
+                }
+
+                
+              })
+
+            if(encontramos==="si")
+            {
+              c = 1
+              alert("Ya hay un SOAT asociado a esta placa: "+placa)
+            }
+            else
+            {
+              document.getElementById("a").getElementsByTagName("input")[0].value = "Solicitar"
+                //document.getElementById("a").getElementsByTagName("input")[0].type = "submit"  
+
+            if(document.getElementById("b").getElementsByTagName("input")[0] !== undefined)
+            {
+              //console.log(document.getElementById("b").getElementsByTagName("input")[0].value)
+              tipoDoc = document.getElementById("b").getElementsByTagName("input")[0].value
+              console.log("tipo")
+              console.log(tipoDoc)
+              numDoc = document.getElementById("b").getElementsByTagName("input")[1].value
+              console.log("num")
+              console.log(numDoc)
+              nombres = document.getElementById("b").getElementsByTagName("input")[2].value
+              console.log("nombres")
+              console.log(nombres)
+              apellidos = document.getElementById("b").getElementsByTagName("input")[3].value
+              console.log("apellidos")
+              console.log(apellidos)
+              correo = document.getElementById("b").getElementsByTagName("input")[4].value
+              console.log("correo")
+              console.log(correo)
+              telefono = document.getElementById("b").getElementsByTagName("input")[5].value
+              console.log("telefono")
+              console.log(telefono)
+
+    
+    fetch('/users.json', {
+        method: 'get',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': Rails.csrfToken()
+        },
+        credentials: 'same-origin'
+      }).then(response => {
+        return response.json()
+  })
+  .then(data => {
+    // Work with JSON data here
+    
+    //console.log(data);
+    
+    data.forEach((user) => {
+      
+
+
+      if(user.email === correo)
+      {
+        console.log(user.id)
+          fetch('/users/'+user.id, {
+            method: 'put',
+            body: JSON.stringify({username: nombres, Apellidos: apellidos, Telefono: telefono, Numero_documento: numDoc, Tipo_documento: tipoDoc}),
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json',
+              'X-CSRF-Token': Rails.csrfToken()
+            },
+            credentials: 'same-origin'
+          }).then(function(response) {
+            return response.json();
+          }).then(function(data) {
+            console.log(data);
+          })    
+      }
+    })
+  })
+
+              document.getElementById("a").getElementsByTagName("input")[0].type = "submit"
+
+            }
+            else
+            {
+                document.getElementById("b").innerHTML ="<h4>DATOS DEL USUARIO</h4> <br><form>Tipo de documento:<br><input type=\"text\"name=\"tipo\"><br>Número de documento:<br><input type=\"text\" name=\"numero\"> <br>Nombres:<br><input type=\"text\" name=\"nombres\">  <br>Apellidos:<br><input type=\"text\" name=\"apellidos\"> <br>Correo:<br><input type=\"text\" name=\"correo\">  <br>Teléfono:<br><input type=\"text\" name=\"telefono\"> </form><br><br>"
+
+                fetch('/users.json', {
+                        method: 'get',
+                        headers: {
+                          'Content-Type': 'application/json',
+                          'X-CSRF-Token': Rails.csrfToken()
+                        },
+                        credentials: 'same-origin'
+                      }).then(response => {
+                        return response.json()
+                  })
+                  .then(data => {
+                    // Work with JSON data here
+                    
+                    console.log(data);
+                    
+                    data.forEach((user) => {
+                      
+                      console.log(user.Telefono);
+
+                      if(user.sesionactiva==="si")
+                      {
+                        document.getElementById("b").getElementsByTagName("input")[0].value = user.Tipo_documento
+                        document.getElementById("b").getElementsByTagName("input")[1].value = user.Numero_documento
+                        document.getElementById("b").getElementsByTagName("input")[2].value = user.username
+                        document.getElementById("b").getElementsByTagName("input")[3].value = user.Apellidos
+                        document.getElementById("b").getElementsByTagName("input")[4].value = user.email
+                        document.getElementById("b").getElementsByTagName("input")[5].value = user.Telefono
+                      }
+                      
+                    })
+                    
+                  })
+
+            
+            }
+
+                
+            }
+
+            })
+          
+        
+        
+    }
+    
+
+  }, false)
+
+  </script>
   </div>
+
+
 <% end %>
+
+
+

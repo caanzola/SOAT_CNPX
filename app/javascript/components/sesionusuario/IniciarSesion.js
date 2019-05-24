@@ -71,7 +71,64 @@ listo(){
         x = 1;
         
         if(user.rol === "Cliente")
+        {
+                          fetch('/users.json', {
+                        method: 'get',
+                        headers: {
+                          'Content-Type': 'application/json',
+                          'X-CSRF-Token': Rails.csrfToken()
+                        },
+                        credentials: 'same-origin'
+                      }).then(response1 => {
+                        return response1.json()
+                  })
+                  .then(data1 => {
+                    // Work with JSON data here
+                  
+                    data.forEach((user1) => {
+
+                      if(user1.id === user.id)
+                      {
+                          fetch('/users/'+user1.id, {
+                            method: 'put',
+                            body: JSON.stringify({sesionactiva:"si"}),
+                            headers: {
+                              'Content-Type': 'application/json',
+                              'Accept': 'application/json',
+                              'X-CSRF-Token': Rails.csrfToken()
+                            },
+                            credentials: 'same-origin'
+                          }).then(function(response) {
+                            return response.json();
+                          }).then(function(data) {
+                            console.log(data);
+                          })
+                      }
+                      else
+                      {
+                            fetch('/users/'+user1.id, {
+                            method: 'put',
+                            body: JSON.stringify({sesionactiva:"no"}),
+                            headers: {
+                              'Content-Type': 'application/json',
+                              'Accept': 'application/json',
+                              'X-CSRF-Token': Rails.csrfToken()
+                            },
+                            credentials: 'same-origin'
+                          }).then(function(response) {
+                            return response.json();
+                          }).then(function(data) {
+                            console.log(data);
+                          })
+                      }
+                      
+                          
+                      
+                    })
+                    
+                  })
           window.location.replace("/seguros/new");
+        }
         else
           window.location.replace("/seguros");
         

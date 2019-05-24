@@ -31,6 +31,7 @@
         <td><%= seguro.Edad %></td>
         <td><%= seguro.Precio %></td>
         <td><%= link_to 'Ver detalle', seguro  %></td>
+        <td><%= link_to 'Destroy', seguro, method: :delete, data: { confirm: 'Are you sure?' } %></
         
       </tr>
     <% end %>
