@@ -82,18 +82,184 @@ placa = document.getElementById("seguro_Placa_del_vehiculo").value
                 {
                   encontramos = "si"
                  // alert("Ya hay un SOAT asociado a esta placa ",placa)
-                  
+                  var r = confirm("El vehículo con placa "+placa+" ya está asegurado ¿Desea extender la vigencia de su seguro por un año más?");
+                    if (r == true) {
+                      console.log("Ok")
+
+
+
+
+                        
+
+
+                if(document.getElementById("b").getElementsByTagName("input")[0] !== undefined)
+                {
+                          //console.log(document.getElementById("b").getElementsByTagName("input")[0].value)
+                          tipoDoc = document.getElementById("b").getElementsByTagName("input")[0].value
+                          console.log("tipo")
+                          console.log(tipoDoc)
+                          numDoc = document.getElementById("b").getElementsByTagName("input")[1].value
+                          console.log("num")
+                          console.log(numDoc)
+                          nombres = document.getElementById("b").getElementsByTagName("input")[2].value
+                          console.log("nombres")
+                          console.log(nombres)
+                          apellidos = document.getElementById("b").getElementsByTagName("input")[3].value
+                          console.log("apellidos")
+                          console.log(apellidos)
+                          correo = document.getElementById("b").getElementsByTagName("input")[4].value
+                          console.log("correo")
+                          console.log(correo)
+                          telefono = document.getElementById("b").getElementsByTagName("input")[5].value
+                          console.log("telefono")
+                          console.log(telefono)
+
+                          document.getElementById("a").getElementsByTagName("input")[0].value = "Solicitar"
+                          document.getElementById("a").getElementsByTagName("input")[0].type = "submit"   
+
+
+                      fetch('/users.json', {
+                              method: 'get',
+                              headers: {
+                                'Content-Type': 'application/json',
+                                'X-CSRF-Token': Rails.csrfToken()
+                              },
+                              credentials: 'same-origin'
+                            }).then(response => {
+                              return response.json()
+                        })
+                        .then(data => {
+                          // Work with JSON data here
+                          
+                          //console.log(data);
+                          
+                          data.forEach((user) => {
+                            
+
+
+                            if(user.email === correo)
+                            {
+                              console.log(user.id)
+                                fetch('/users/'+user.id, {
+                                  method: 'put',
+                                  body: JSON.stringify({username: nombres, Apellidos: apellidos, Telefono: telefono, Numero_documento: numDoc, Tipo_documento: tipoDoc}),
+                                  headers: {
+                                    'Content-Type': 'application/json',
+                                    'Accept': 'application/json',
+                                    'X-CSRF-Token': Rails.csrfToken()
+                                  },
+                                  credentials: 'same-origin'
+                                }).then(function(response) {
+                                  return response.json();
+                                }).then(function(data) {
+                                  console.log(data);
+                                })    
+                            }
+                          })
+                        })
+                        console.log("lol")
+                        console.log(document.getElementById("c").getElementsByTagName("input").length)
+
+                        if(document.getElementById("c").getElementsByTagName("input").length === 0)
+                            {
+                              document.getElementById("c").innerHTML ="<h4>DATOS PARA LA TRANSACCIÓN</h4> <br><form>Número de tarjeta de crédito:<br><input type=\"text\"name=\"numTarjeta\"><br>Nombre del titular:<br><input type=\"text\" name=\"nombreTitular\"> <br>Fecha de vencimiento de la tarjeta:<br><input type=\"text\" name=\"fechaVencimiento\">  <br>Código de seguridad de la tarjeta (CVV):<br><input type=\"text\" name=\"codigoSeguridad\"> <br>Número de cuotas:<br><input type=\"text\" name=\"numCuotas\"> </form><br><br>"
+                            }
+                            else
+                            {
+                              numTarjeta = document.getElementById("c").getElementsByTagName("input")[0].value
+                                      console.log("numTarjeta")
+                                      console.log(numTarjeta)
+                                      nombreTitular = document.getElementById("c").getElementsByTagName("input")[1].value
+                                      console.log("nombreTitular")
+                                      console.log(nombreTitular)
+                                      fechaVencimiento = document.getElementById("c").getElementsByTagName("input")[2].value
+                                      console.log("fechaVencimiento")
+                                      console.log(fechaVencimiento)
+                                      codigoSeguridad = document.getElementById("c").getElementsByTagName("input")[3].value
+                                      console.log("codigoSeguridad")
+                                      console.log(codigoSeguridad)
+                                      numCuotas = document.getElementById("c").getElementsByTagName("input")[4].value
+                                      console.log("numCuotas")
+                                      console.log(numCuotas)
+
+
+
+                                      fetch('/compras', {
+                                        method: 'post',
+                                        body: JSON.stringify({Numero_tarjeta:numTarjeta, Nombre_titular:nombreTitular, Fecha_de_vencimiento_tarjeta:fechaVencimiento, Codigo_seguridad:codigoSeguridad, Numero_cuotas:numCuotas, Placa_asociada:placa}),
+                                        headers: {
+                                          'Content-Type': 'application/json',
+                                          'X-CSRF-Token': Rails.csrfToken()
+                                        },
+                                        credentials: 'same-origin'
+                                      }).then(function(response) {
+                                        //return response.json();
+                                      }).then(function(data) {
+                                        console.log(data);
+                                      })
+                                     
+                            } 
+
+                    }
+                    else
+                    {
+
+
+                        document.getElementById("b").innerHTML ="<h4>DATOS DEL USUARIO</h4> <br><form>Tipo de documento:<br><input type=\"text\"name=\"tipo\"><br>Número de documento:<br><input type=\"text\" name=\"numero\"> <br>Nombres:<br><input type=\"text\" name=\"nombres\">  <br>Apellidos:<br><input type=\"text\" name=\"apellidos\"> <br>Correo:<br><input type=\"text\" name=\"correo\">  <br>Teléfono:<br><input type=\"text\" name=\"telefono\"> </form><br><br>"
+
+                        fetch('/users.json', {
+                                method: 'get',
+                                headers: {
+                                  'Content-Type': 'application/json',
+                                  'X-CSRF-Token': Rails.csrfToken()
+                                },
+                                credentials: 'same-origin'
+                              }).then(response => {
+                                return response.json()
+                          })
+                          .then(data => {
+                            // Work with JSON data here
+                            
+                            console.log(data);
+                            
+                            data.forEach((user) => {
+                              
+                              console.log(user.Telefono);
+
+                              if(user.sesionactiva==="si")
+                              {
+                                document.getElementById("b").getElementsByTagName("input")[0].value = user.Tipo_documento
+                                document.getElementById("b").getElementsByTagName("input")[1].value = user.Numero_documento
+                                document.getElementById("b").getElementsByTagName("input")[2].value = user.username
+                                document.getElementById("b").getElementsByTagName("input")[3].value = user.Apellidos
+                                document.getElementById("b").getElementsByTagName("input")[4].value = user.email
+                                document.getElementById("b").getElementsByTagName("input")[5].value = user.Telefono
+                              }
+                              
+                            })
+                            
+                          })
+
+                    
+                    }
+
+
+
+
+
+
+                } 
+                else 
+                {
+                    console.log("Cancel")
                 }
+
+           }
 
                 
               })
 
-            if(encontramos==="si")
-            {
-              c = 1
-              alert("Ya hay un SOAT asociado a esta placa: "+placa)
-            }
-            else
+            if(encontramos!=="si")
             {
               
                 //document.getElementById("a").getElementsByTagName("input")[0].type = "submit"  
@@ -173,7 +339,8 @@ console.log("lol")
     {
       document.getElementById("c").innerHTML ="<h4>DATOS PARA LA TRANSACCIÓN</h4> <br><form>Número de tarjeta de crédito:<br><input type=\"text\"name=\"numTarjeta\"><br>Nombre del titular:<br><input type=\"text\" name=\"nombreTitular\"> <br>Fecha de vencimiento de la tarjeta:<br><input type=\"text\" name=\"fechaVencimiento\">  <br>Código de seguridad de la tarjeta (CVV):<br><input type=\"text\" name=\"codigoSeguridad\"> <br>Número de cuotas:<br><input type=\"text\" name=\"numCuotas\"> </form><br><br>"
     }
-    else{
+    else
+    {
       numTarjeta = document.getElementById("c").getElementsByTagName("input")[0].value
               console.log("numTarjeta")
               console.log(numTarjeta)
