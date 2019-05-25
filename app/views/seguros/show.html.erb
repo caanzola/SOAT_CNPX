@@ -19,41 +19,48 @@
 
 </div>
 
+<div id = "fechafin">
 <p>
   <strong>Fecha fin vigencia:</strong>
   <%= @seguro.Fecha_fin_vigencia %>
 </p>
-
+</div>
+<div id = "numPas">
 <p>
   <strong>Numero pasajeros:</strong>
   <%= @seguro.Numero_pasajeros %>
 </p>
-
+</div>
+<div id = "cilin">
 <p>
   <strong>Cilindraje:</strong>
   <%= @seguro.Cilindraje %>
 </p>
-
+</div>
+<div id = "clase">
 <p>
   <strong>Clase:</strong>
   <%= @seguro.Clase %>
 </p>
-
+</div></div>
+<div id = "ton">
 <p>
   <strong>Toneladas:</strong>
   <%= @seguro.Toneladas %>
 </p>
-
+</div>
+<div id = "edad">
 <p>
   <strong>Edad:</strong>
   <%= @seguro.Edad %>
 </p>
-
+</div>
+<div id = "precio">
 <p>
   <strong>Precio:</strong>
   <%= @seguro.Precio %>
 </p>
-
+</div>
 
 <script>
 
@@ -750,11 +757,34 @@
 
 
 
+    placa = document.getElementById("placa").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
 
+    fi = document.getElementById("fechaini").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+    ff = document.getElementById("fechafin").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+    np = document.getElementById("numPas").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+    c = document.getElementById("cilin").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+    cl = document.getElementById("clase").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+    t = document.getElementById("ton").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+    e = document.getElementById("edad").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+    p = document.getElementById("precio").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
 
+  var doc = new jsPDF()
+    
 
-  
+    doc.text(20, 25, "Resumen del pago de su SOAT")
 
+    doc.text(20, 40, "")
+    doc.text(20, 50, "Placa del vehículo: "+placa)
+    doc.text(20, 60, "Fecha de inicio de vigencia: " + fi)
+    
+    doc.text(20, 70, "Fecha de vencimiento de vigencia: " + ff)
+    doc.text(20, 80, "Número de pasajeros: " + np)
+    doc.text(20, 90, "Cilindraje: " + c)
+    doc.text(20, 100, "Clase: " + cl)
+    doc.text(20, 110, "Toneladas: " + t)
+    doc.text(20, 120, "Edad: " + e)
+    doc.text(20, 150, "Precio: " + p)
+    doc.save('Test.pdf')
 
 
 
