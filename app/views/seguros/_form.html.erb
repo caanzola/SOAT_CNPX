@@ -11,14 +11,14 @@
     
     <br>
     <%= f.input :Placa_del_vehiculo %>
-    <%= f.input :Fecha_inicio_vigencia %>
-    <%= f.input :Fecha_fin_vigencia %>
-    <%= f.input :Numero_pasajeros %>
+    
+    
+    <%= f.input :Numero_pasajeros%>
     <%= f.input :Cilindraje %>
     <%= f.input :Clase %>
     <%= f.input :Toneladas %>
     <%= f.input :Edad %>
-    <%= f.input :Precio %>
+    
 
 
 
@@ -33,6 +33,9 @@
 <div id="c" class="form-actions">
 </div>
 
+<div id="d" class="form-actions">
+
+</div>
 
   <div id="a" class="form-actions">
 
@@ -49,12 +52,39 @@
       
       
 placa = document.getElementById("seguro_Placa_del_vehiculo").value
-    console.log(placa)
+    //console.log(placa)
+
+    numPasaj = document.getElementById("seguro_Numero_pasajeros").value
+    cilind = document.getElementById("seguro_Cilindraje").value
+    clas = document.getElementById("seguro_Clase").value
+    tonel = document.getElementById("seguro_Toneladas").value
+    eda = document.getElementById("seguro_Edad").value
+    
 
     if(placa ==="")
     {
 
-      alert("Placa vacia")
+      alert("El campo Placa del vehículo está vacío, debe llenarlo")
+    }
+    else if(numPasaj ==="")
+    {
+      alert("El campo Número de pasajeros está vacío, debe llenarlo")
+    }
+    else if(cilind ==="")
+    {
+      alert("El campo Cilindraje está vacío, debe llenarlo")
+    }
+    else if(clas ==="")
+    {
+      alert("El campo Clase está vacío, debe llenarlo")
+    }
+    else if(tonel ==="")
+    {
+      alert("El campo Toneladas está vacío, debe llenarlo")
+    }
+    else if(eda ==="")
+    {
+      alert("El campo Edad está vacío, debe llenarlo")
     }
     else
     {
@@ -83,7 +113,8 @@ placa = document.getElementById("seguro_Placa_del_vehiculo").value
                   encontramos = "si"
                  // alert("Ya hay un SOAT asociado a esta placa ",placa)
                   var r = confirm("El vehículo con placa "+placa+" ya está asegurado ¿Desea extender la vigencia de su seguro por un año más?");
-                    if (r == true) {
+                    if (r == true) 
+                    {
                       console.log("Ok")
 
 
@@ -205,7 +236,7 @@ placa = document.getElementById("seguro_Placa_del_vehiculo").value
                     {
 
 
-                        document.getElementById("b").innerHTML ="<h4>DATOS DEL USUARIO</h4> <br><form>Tipo de documento:<br><input type=\"text\"name=\"tipo\"><br>Número de documento:<br><input type=\"text\" name=\"numero\"> <br>Nombres:<br><input type=\"text\" name=\"nombres\">  <br>Apellidos:<br><input type=\"text\" name=\"apellidos\"> <br>Correo:<br><input type=\"text\" name=\"correo\">  <br>Teléfono:<br><input type=\"text\" name=\"telefono\"> </form><br><br>"
+                        document.getElementById("b").innerHTML ="<h4>DATOS DEL USUARIO</h4> <br><form>Tipo de documento:<br><input type=\"text\"name=\"tipo\" required><br>Número de documento:<br><input type=\"text\" name=\"numero\" required> <br>Nombres:<br><input type=\"text\" name=\"nombres\" required>  <br>Apellidos:<br><input type=\"text\" name=\"apellidos\" required> <br>Correo:<br><input type=\"text\" name=\"correo\" required>  <br>Teléfono:<br><input type=\"text\" name=\"telefono\" required> </form><br><br>"
 
                         fetch('/users.json', {
                                 method: 'get',
@@ -286,94 +317,149 @@ placa = document.getElementById("seguro_Placa_del_vehiculo").value
               console.log("telefono")
               console.log(telefono)
 
-              document.getElementById("a").getElementsByTagName("input")[0].value = "Solicitar"
-              document.getElementById("a").getElementsByTagName("input")[0].type = "submit" 
+              if(tipoDoc === "")
+              {
+                alert("El campo Tipo de documento está vacío, debe llenarlo")
+              }
+              else if(numDoc ==="")
+              {
+                alert("El campo Número de documento está vacío, debe llenarlo")
+              }
+              else if(nombres ==="")
+              {
+                alert("El campo Nombres está vacío, debe llenarlo")
+              }
+              else if(apellidos ==="")
+              {
+                alert("El campo Apellidos de documento está vacío, debe llenarlo")
+              }
+              else if(correo ==="")
+              {
+                alert("El campo Correo de documento está vacío, debe llenarlo")
+              }
+              else if(telefono ==="")
+              {
+                alert("El campo Teléfono de documento está vacío, debe llenarlo")
+              }
+              else
+              {
+                fetch('/users.json', {
+                  method: 'get',
+                  headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-Token': Rails.csrfToken()
+                  },
+                  credentials: 'same-origin'
+                }).then(response => {
+                  return response.json()
+                    })
+                    .then(data => {
+                      // Work with JSON data here
+                      
+                      //console.log(data);
+                      
+                      data.forEach((user) => {
+                        
 
-    
-    fetch('/users.json', {
-        method: 'get',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRF-Token': Rails.csrfToken()
-        },
-        credentials: 'same-origin'
-      }).then(response => {
-        return response.json()
-  })
-  .then(data => {
-    // Work with JSON data here
-    
-    //console.log(data);
-    
-    data.forEach((user) => {
-      
 
 
-      if(user.email === correo)
-      {
-        console.log(user.id)
-          fetch('/users/'+user.id, {
-            method: 'put',
-            body: JSON.stringify({username: nombres, Apellidos: apellidos, Telefono: telefono, Numero_documento: numDoc, Tipo_documento: tipoDoc}),
-            headers: {
-              'Content-Type': 'application/json',
-              'Accept': 'application/json',
-              'X-CSRF-Token': Rails.csrfToken()
-            },
-            credentials: 'same-origin'
-          }).then(function(response) {
-            return response.json();
-          }).then(function(data) {
-            console.log(data);
-          })    
-      }
-    })
-  })
 
-console.log("lol")
-  console.log(document.getElementById("c").getElementsByTagName("input").length)
+                        if(user.email === correo)
+                        {
+                          console.log(user.id)
+                            fetch('/users/'+user.id, {
+                              method: 'put',
+                              body: JSON.stringify({username: nombres, Apellidos: apellidos, Telefono: telefono, Numero_documento: numDoc, Tipo_documento: tipoDoc}),
+                              headers: {
+                                'Content-Type': 'application/json',
+                                'Accept': 'application/json',
+                                'X-CSRF-Token': Rails.csrfToken()
+                              },
+                              credentials: 'same-origin'
+                            }).then(function(response) {
+                              return response.json();
+                            }).then(function(data) {
+                              console.log(data);
+                            })    
+                        }
+                      })
+                    })
 
-  
+                    console.log("lol")
+                    console.log(document.getElementById("c").getElementsByTagName("input").length)
 
-    if(document.getElementById("c").getElementsByTagName("input").length === 0)
-    {
-      document.getElementById("c").innerHTML ="<h4>DATOS PARA LA TRANSACCIÓN</h4> <br><form>Número de tarjeta de crédito:<br><input type=\"text\"name=\"numTarjeta\"><br>Nombre del titular:<br><input type=\"text\" name=\"nombreTitular\"> <br>Fecha de vencimiento de la tarjeta:<br><input type=\"text\" name=\"fechaVencimiento\">  <br>Código de seguridad de la tarjeta (CVV):<br><input type=\"text\" name=\"codigoSeguridad\"> <br>Número de cuotas:<br><input type=\"text\" name=\"numCuotas\"> </form><br><br>"
-    }
-    else
-    {
-      numTarjeta = document.getElementById("c").getElementsByTagName("input")[0].value
-              console.log("numTarjeta")
-              console.log(numTarjeta)
-              nombreTitular = document.getElementById("c").getElementsByTagName("input")[1].value
-              console.log("nombreTitular")
-              console.log(nombreTitular)
-              fechaVencimiento = document.getElementById("c").getElementsByTagName("input")[2].value
-              console.log("fechaVencimiento")
-              console.log(fechaVencimiento)
-              codigoSeguridad = document.getElementById("c").getElementsByTagName("input")[3].value
-              console.log("codigoSeguridad")
-              console.log(codigoSeguridad)
-              numCuotas = document.getElementById("c").getElementsByTagName("input")[4].value
-              console.log("numCuotas")
-              console.log(numCuotas)
+                    
 
-              fetch('/compras', {
-                method: 'post',
-                body: JSON.stringify({Numero_tarjeta:numTarjeta, Nombre_titular:nombreTitular, Fecha_de_vencimiento_tarjeta:fechaVencimiento, Codigo_seguridad:codigoSeguridad, Numero_cuotas:numCuotas, Placa_asociada:placa}),
-                headers: {
-                  'Content-Type': 'application/json',
-                  'X-CSRF-Token': Rails.csrfToken()
-                },
-                credentials: 'same-origin'
-              }).then(function(response) {
-                //return response.json();
-              }).then(function(data) {
-                console.log(data);
-              })
-             
-    }         
-              
-  //
+                      if(document.getElementById("c").getElementsByTagName("input").length === 0)
+                      {
+                        document.getElementById("c").innerHTML ="<h4>DATOS PARA LA TRANSACCIÓN</h4> <br><form>Número de tarjeta de crédito:<br><input type=\"text\"name=\"numTarjeta\"><br>Nombre del titular:<br><input type=\"text\" name=\"nombreTitular\"> <br>Fecha de vencimiento de la tarjeta:<br><input type=\"text\" name=\"fechaVencimiento\">  <br>Código de seguridad de la tarjeta (CVV):<br><input type=\"text\" name=\"codigoSeguridad\"> <br>Número de cuotas:<br><input type=\"text\" name=\"numCuotas\"> </form><br><br>"
+                      }
+                      else
+                      {
+                        numTarjeta = document.getElementById("c").getElementsByTagName("input")[0].value
+                                console.log("numTarjeta")
+                                console.log(numTarjeta)
+                                nombreTitular = document.getElementById("c").getElementsByTagName("input")[1].value
+                                console.log("nombreTitular")
+                                console.log(nombreTitular)
+                                fechaVencimiento = document.getElementById("c").getElementsByTagName("input")[2].value
+                                console.log("fechaVencimiento")
+                                console.log(fechaVencimiento)
+                                codigoSeguridad = document.getElementById("c").getElementsByTagName("input")[3].value
+                                console.log("codigoSeguridad")
+                                console.log(codigoSeguridad)
+                                numCuotas = document.getElementById("c").getElementsByTagName("input")[4].value
+                                console.log("numCuotas")
+                                console.log(numCuotas)
+
+
+                                if(numTarjeta ==="")
+                                {
+                                  alert("El campo Número de tarjeta está vacío, debe llenarlo")
+                                }
+                                else if( nombreTitular==="")
+                                {
+                                  alert("El campo Nombre del titular está vacío, debe llenarlo")
+                                }
+                                else if( fechaVencimiento==="")
+                                {
+                                  alert("El campo Fecha de vencimiento de la tarjeta está vacío, debe llenarlo")
+                                }
+                                else if( codigoSeguridad==="")
+                                {
+                                  alert("El campo Código de seguridad de la tarjeta (CVV) está vacío, debe llenarlo")
+                                }
+                                else if( numCuotas==="")
+                                {
+                                  alert("El campo Número de cuotas está vacío, debe llenarlo")
+                                }
+                                else
+                                {
+                                   document.getElementById("a").getElementsByTagName("input")[0].value = "Solicitar"
+                                    document.getElementById("a").getElementsByTagName("input")[0].type = "submit" 
+
+                                    document.getElementById("d").innerHTML ="Los campos han sido llenados correctamente, puede solicitar su SOAT seleccionando la opción Solicitar <br><br><br>"
+                                
+
+                                    fetch('/compras', {
+                                      method: 'post',
+                                      body: JSON.stringify({Numero_tarjeta:numTarjeta, Nombre_titular:nombreTitular, Fecha_de_vencimiento_tarjeta:fechaVencimiento, Codigo_seguridad:codigoSeguridad, Numero_cuotas:numCuotas, Placa_asociada:placa}),
+                                      headers: {
+                                        'Content-Type': 'application/json',
+                                        'X-CSRF-Token': Rails.csrfToken()
+                                      },
+                                      credentials: 'same-origin'
+                                    }).then(function(response) {
+                                      //return response.json();
+                                    }).then(function(data) {
+                                      console.log(data);
+                                    })
+
+                                }
+                               
+                      }   
+
+              }
 
             }
             else

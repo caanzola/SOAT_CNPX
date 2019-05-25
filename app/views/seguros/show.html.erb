@@ -10,10 +10,14 @@
 </div>
 
 
+<div id = "fechaini">
+ 
 <p>
   <strong>Fecha inicio vigencia:</strong>
   <%= @seguro.Fecha_inicio_vigencia %>
 </p>
+
+</div>
 
 <p>
   <strong>Fecha fin vigencia:</strong>
@@ -53,76 +57,266 @@
 
 <script>
 
-  fetch('/compras.json', {
-        method: 'get',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRF-Token': Rails.csrfToken()
-        },
-        credentials: 'same-origin'
-      }).then(response => {
-        return response.json()
-  })
-  .then(data => {
-    // Work with JSON data here
+  cuantos = 0
+
+
+    placa = document.getElementById("placa").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+
+    fi = document.getElementById("fechaini").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+
+    console.log(fi)
+
+    if(fi==="")
+    {
+
+                  fetch('/seguros.json', {
+                          method: 'get',
+                          headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRF-Token': Rails.csrfToken()
+                          },
+                          credentials: 'same-origin'
+                                  }).then(response => {
+                                    return response.json()
+                              })
+                              .then(data => {
+                                // Work with JSON data here
+                                
+                                //console.log(data)
+                                
+
+                                data.forEach((seguro) => {
+
+                                  //console.log(seguro.Placa_del_vehiculo)
+                                  if(seguro.Placa_del_vehiculo === placa)
+                                  {
+                                    cuantos = cuantos + 1
+                                    console.log("aumenta "+cuantos)
+                                  }
+                                })
+
+
+                                console.log("cuantos "+cuantos)
+                                if(cuantos >1)
+                                {
+                                  console.log("Soat a misma placa")
+
+
+
+                                  fetch('/seguros.json', {
+                                                      method: 'get',
+                                                      headers: {
+                                                        'Content-Type': 'application/json',
+                                                        'X-CSRF-Token': Rails.csrfToken()
+                                                      },
+                                                      credentials: 'same-origin'
+                                                    }).then(response => {
+                                                      return response.json()
+                                                    })
+                                                    .then(data => {
+                                                      // Work with JSON data here
+                                                      
+                                                      //console.log(data);
+                                                      fechaFinOtro = ""
+                                                      
+                                                      data.forEach((seguro) => {
+
+                                                        anio = 0
+                                                    
+
+                                                    plac = document.getElementById("placa").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+
+                                                    fi = document.getElementById("fechaini").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+                                                    
+                                                    console.log("vs")
+                                                    
+
+                                                    if(plac === seguro.Placa_del_vehiculo && seguro.Fecha_fin_vigencia !==null)
+                                                          {
+                                                            console.log("vs")
+                                                              fechaFinOtro = seguro.Fecha_fin_vigencia
+                                                              console.log(fechaFinOtro)
+                                                          }
+
+
+                                                          if(plac === seguro.Placa_del_vehiculo && seguro.Fecha_inicio_vigencia ===null)
+                                                          {
+                                                            console.log("Este sí es "+seguro.id)
+
+                                                            //console.log(seguro.created_at.split("T"))
+
+                                                            fechainicio = fechaFinOtro
+                                                            //console.log("inicial "+ fechainicio)
+                                                            anio = fechainicio.split("-")[0]
+
+                                                            dia = fechainicio.split("-")[2]
+                                                            numdia = parseInt(dia, 10)
+                                                            diacorrecto = numdia + 1
+
+                                                            fechainiciocorrecto = fechainicio.split("-")[0]+"-"+fechainicio.split("-")[1]+"-"+diacorrecto
+                                                            //console.log("anio "+anio)
+                                                            numanio = parseInt(anio, 10)
+                                                            //console.log("num anio "+ numanio)
+                                                            anioCorrecto = numanio+1
+                                                            //console.log(anioCorrecto)
+                                                            fechafin = anioCorrecto + "-"+fechainicio.split("-")[1]+"-"+diacorrecto
+                                                            //console.log(fechafin)
+
+                                                            fetch('/seguros/'+seguro.id, {
+                                                                method: 'put',
+                                                                body: JSON.stringify({Fecha_inicio_vigencia:fechainiciocorrecto, Fecha_fin_vigencia:fechafin}),
+                                                                headers: {
+                                                                  'Content-Type': 'application/json',
+                                                                  'Accept': 'application/json',
+                                                                  'X-CSRF-Token': Rails.csrfToken()
+                                                                },
+                                                                credentials: 'same-origin'
+                                                              }).then(function(response) {
+                                                                return response.json();
+                                                              }).then(function(data) {
+                                                                console.log(data);
+                                                              }) 
+
+                                                          }
+                                                        })
+                                                      })
+                                window.location.reload()
+
+                                }
+                                else
+                                {
+
+                                              fetch('/compras.json', {
+                                                      method: 'get',
+                                                      headers: {
+                                                        'Content-Type': 'application/json',
+                                                        'X-CSRF-Token': Rails.csrfToken()
+                                                      },
+                                                      credentials: 'same-origin'
+                                                    }).then(response => {
+                                                      return response.json()
+                                                })
+                                                .then(data => {
+                                                  // Work with JSON data here
+                                                  
+                                                  //console.log(data);
+                                                  
+                                                  data.forEach((compra) => {
+                                                    
+
+                                                    fetch('/seguros.json', {
+                                                      method: 'get',
+                                                      headers: {
+                                                        'Content-Type': 'application/json',
+                                                        'X-CSRF-Token': Rails.csrfToken()
+                                                      },
+                                                      credentials: 'same-origin'
+                                                    }).then(response => {
+                                                      return response.json()
+                                                    })
+                                                    .then(data => {
+                                                      // Work with JSON data here
+                                                      
+                                                      //console.log(data);
+                                                      
+                                                      data.forEach((seguro) => {
+                                                    
+
+                                                    plac = document.getElementById("placa").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+
+                                                    fi = document.getElementById("fechaini").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+                                                    //console.log("vs")
+                                                    //console.log(fi)
+
+                                                    
+
+
+
+                                                          if(plac === seguro.Placa_del_vehiculo)
+                                                          {
+
+                                                            //console.log(seguro.created_at.split("T"))
+
+                                                            fechainicio = seguro.created_at.split("T")[0]
+                                                            //console.log("inicial "+ fechainicio)
+                                                            anio = fechainicio.split("-")[0]
+                                                            //console.log("anio "+anio)
+                                                            numanio = parseInt(anio, 10)
+                                                            //console.log("num anio "+ numanio)
+                                                            anioCorrecto = numanio+1
+                                                            //console.log(anioCorrecto)
+                                                            fechafin = anioCorrecto + "-"+fechainicio.split("-")[1]+"-"+fechainicio.split("-")[2]
+                                                            //console.log(fechafin)
+
+                                                            fetch('/seguros/'+seguro.id, {
+                                                                method: 'put',
+                                                                body: JSON.stringify({Fecha_inicio_vigencia:seguro.created_at.split("T")[0], Fecha_fin_vigencia:fechafin}),
+                                                                headers: {
+                                                                  'Content-Type': 'application/json',
+                                                                  'Accept': 'application/json',
+                                                                  'X-CSRF-Token': Rails.csrfToken()
+                                                                },
+                                                                credentials: 'same-origin'
+                                                              }).then(function(response) {
+                                                                return response.json();
+                                                              }).then(function(data) {
+                                                                console.log(data);
+                                                              }) 
+
+                                                          }   
+
+
+                                                      
+
+                                                           fetch('/compras/'+compra.id, {
+                                                              method: 'put',
+                                                              body: JSON.stringify({id_seguro:seguro.id}),
+                                                              headers: {
+                                                                'Content-Type': 'application/json',
+                                                                'Accept': 'application/json',
+                                                                'X-CSRF-Token': Rails.csrfToken()
+                                                              },
+                                                              credentials: 'same-origin'
+                                                            }).then(function(response) {
+                                                              return response.json();
+                                                            }).then(function(data) {
+                                                              console.log(data);
+
+                                                            })      
+
+                                                      
+                                                    
+                                                    
+                                                      })
+                                                    })  
     
-    //console.log(data);
-    
-    data.forEach((compra) => {
+                                                  })
+
+                                                })  
+
+                                window.location.reload()
+                                }
+                                
+
+                              })
+
+
+    }
+  
       
 
-      fetch('/seguros.json', {
-        method: 'get',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRF-Token': Rails.csrfToken()
-        },
-        credentials: 'same-origin'
-      }).then(response => {
-        return response.json()
-      })
-      .then(data => {
-        // Work with JSON data here
-        
-        //console.log(data);
-        
-        data.forEach((seguro) => {
-      
-
-      plac = document.getElementById("placa").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
-      
-      console.log(plac)
-      console.log("vs")
-      console.log(seguro.Placa_del_vehiculo)
 
 
-      if(plac === seguro.Placa_del_vehiculo)
-      {
 
-        console.log("SIKAS")
 
-        fetch('/compras/'+compra.id, {
-            method: 'put',
-            body: JSON.stringify({id_seguro:seguro.id}),
-            headers: {
-              'Content-Type': 'application/json',
-              'Accept': 'application/json',
-              'X-CSRF-Token': Rails.csrfToken()
-            },
-            credentials: 'same-origin'
-          }).then(function(response) {
-            return response.json();
-          }).then(function(data) {
-            console.log(data);
-          }) 
-      }
-      
-      
-        })
-      })  
 
-    })
-  })    
+  
+
+
+
+
+
+
 
 </script>
 
