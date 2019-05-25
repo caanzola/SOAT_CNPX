@@ -15,7 +15,12 @@
     
     <%= f.input :Numero_pasajeros%>
     <%= f.input :Cilindraje %>
-    <%= f.input :Clase %>
+
+    <h4>Clase</h4>
+
+    <%= f.select :Clase, ['MOTO', 'CAMPEROS Y CAMIONETAS', 'CARGA O MIXTO', 'OFICIALES ESPECIALES', 'AUTOS FAMILIARES', 'VEHICULOS PARA SEIS O MAS PASAJEROS', 'AUTOS DE NEGOCIOS Y TAXIS', 'BUSES Y BUSETAS DE SERVICIO PUBLICO URBANO', 'SERVICIO PUBLICO INTERMUNICIPAL']%>
+    <br>
+    <br>
     <%= f.input :Toneladas %>
     <%= f.input :Edad %>
     

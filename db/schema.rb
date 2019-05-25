@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_24_213656) do
+ActiveRecord::Schema.define(version: 2019_05_25_064628) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 2019_05_24_213656) do
     t.string "Fecha_de_vencimiento_tarjeta"
     t.integer "Codigo_tarjeta"
     t.integer "Numero_cuotas"
+    t.string "Subtipo"
   end
 
   create_table "soatseguros", force: :cascade do |t|

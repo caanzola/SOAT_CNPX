@@ -58,6 +58,8 @@
 <script>
 
   cuantos = 0
+  refresh = 0
+  refresh2 = 0
 
 
     placa = document.getElementById("placa").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
@@ -68,6 +70,16 @@
 
     if(fi==="")
     {
+
+      preciosMotos = [ "357.850", "480.100", "541.300"]
+      preciosCamperos = ["563.650", "677.500", "673.000", "797.200", "789.400", "905.650"]
+      preciosCarga = ["631.600", "911.950", "1.152.850"]
+      preciosOficiales = ["710.650","895.750","1.073.800"]
+      preciosFamiliares = ["318.100", "421.750", "387.250", "481.750", "452.350", "536.350"]
+      preciosSeis = ["566.950","723.550","758.650", "911.050"]
+      preciosTaxis = ["394.000", "492.100", "489.550", "605.050", "631.600", "740.950"]
+      preciosPublico = ["932.200","1.352.500"]
+      
 
                   fetch('/seguros.json', {
                           method: 'get',
@@ -91,15 +103,15 @@
                                   if(seguro.Placa_del_vehiculo === placa)
                                   {
                                     cuantos = cuantos + 1
-                                    console.log("aumenta "+cuantos)
+                                    //console.log("aumenta "+cuantos)
                                   }
                                 })
 
 
-                                console.log("cuantos "+cuantos)
+                                //console.log("cuantos "+cuantos)
                                 if(cuantos >1)
                                 {
-                                  console.log("Soat a misma placa")
+                                  //console.log("Soat a misma placa")
 
 
 
@@ -128,20 +140,20 @@
 
                                                     fi = document.getElementById("fechaini").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
                                                     
-                                                    console.log("vs")
+                                                    //console.log("vs")
                                                     
 
                                                     if(plac === seguro.Placa_del_vehiculo && seguro.Fecha_fin_vigencia !==null)
                                                           {
-                                                            console.log("vs")
+                                                            //console.log("vs")
                                                               fechaFinOtro = seguro.Fecha_fin_vigencia
-                                                              console.log(fechaFinOtro)
+                                                              //console.log(fechaFinOtro)
                                                           }
 
 
                                                           if(plac === seguro.Placa_del_vehiculo && seguro.Fecha_inicio_vigencia ===null)
                                                           {
-                                                            console.log("Este sí es "+seguro.id)
+                                                            //console.log("Este sí es "+seguro.id)
 
                                                             //console.log(seguro.created_at.split("T"))
 
@@ -160,11 +172,216 @@
                                                             anioCorrecto = numanio+1
                                                             //console.log(anioCorrecto)
                                                             fechafin = anioCorrecto + "-"+fechainicio.split("-")[1]+"-"+diacorrecto
+                                                                                                                     
+                                                            
+
+ money =""
+
+                          if(seguro.Clase ==="MOTO")
+                          {
+                            if(seguro.Cilindraje < 100)
+                            {
+                              money = preciosMotos[0]  
+                            }
+                            else if(seguro.Cilindraje >= 100 && seguro.Cilindraje <= 200)
+                            {
+                              money = preciosMotos[1]  
+                            }
+                            else
+                            {
+                              money = preciosMotos[2]  
+                            }
+                            
+                          }
+                          else if(seguro.Clase ==="CAMPEROS Y CAMIONETAS")
+                          {
+                           if(seguro.Cilindraje < 1500)
+                            {
+                              if(seguro.Edad <= 9)
+                              {
+                                money = preciosCamperos[0]    
+                              }
+                              else
+                              {
+                                money = preciosCamperos[1]    
+                              }
+                              
+                            }
+                            else if(seguro.Cilindraje >= 1500 &&seguro.Cilindraje <= 2000)
+                            {
+                              if(seguro.Edad <= 9)
+                              {
+                                money = preciosCamperos[2]    
+                              }
+                              else
+                              {
+                                money = preciosCamperos[3]    
+                              }
+                            }
+                            else
+                            {
+
+                              if(seguro.Edad <= 9)
+                              {
+                                money = preciosCamperos[4]    
+                              }
+                              else
+                              {
+                                money = preciosCamperos[5]    
+                              }
+                            }
+                          }
+                          else if(seguro.Clase ==="CARGA O MIXTO")
+                          {
+                            if(seguro.Toneladas < 5)
+                            {
+                              money = preciosCarga[0]
+                            }
+                            else if(seguro.Toneladas >= 5 && seguro.Toneladas <= 15)
+                            {
+                              money = preciosCarga[1]
+                            }
+                            else
+                            {
+                              money = preciosCarga[2]
+                            }
+                          }
+                          else if(seguro.Clase ==="OFICIALES ESPECIALES")
+                          {
+                            if(seguro.Cilindraje < 1500)
+                            {
+                              money = preciosOficiales[0]  
+                            }
+                            else if(seguro.Cilindraje >= 1500 && seguro.Cilindraje <= 2500)
+                            {
+                              money = preciosOficiales[1]  
+                            }
+                            else
+                            {
+                              money = preciosOficiales[2]  
+                            }
+                            
+                          }
+                          else if(seguro.Clase ==="AUTOS FAMILIARES")
+                          {
+                            if(seguro.Cilindraje < 1500)
+                            {
+                              if(seguro.Edad <= 9)
+                              {
+                                money = preciosFamiliares[0]    
+                              }
+                              else
+                              {
+                                money = preciosFamiliares[1]    
+                              } 
+                            }
+                            else if(seguro.Cilindraje >= 1500 && seguro.Cilindraje <= 2500)
+                            {
+                              if(seguro.Edad <= 9)
+                              {
+                                money = preciosFamiliares[2]    
+                              }
+                              else
+                              {
+                                money = preciosFamiliares[3]    
+                              } 
+                            }
+                            else
+                            {
+                              if(seguro.Edad <= 9)
+                              {
+                                money = preciosFamiliares[4]    
+                              }
+                              else
+                              {
+                                money = preciosFamiliares[5]    
+                              } 
+                            }
+                            
+                          }
+                          else if(seguro.Clase ==="VEHICULOS PARA SEIS O MAS PASAJEROS")
+                          {
+
+                            if(seguro.Cilindraje < 2500)
+                            {
+                              if(seguro.Edad <= 9)
+                              {
+                                money = preciosSeis[0]    
+                              }
+                              else
+                              {
+                                money = preciosSeis[1]    
+                              } 
+                            }
+                            else
+                            {
+                              if(seguro.Edad <= 9)
+                              {
+                                money = preciosSeis[2]    
+                              }
+                              else
+                              {
+                                money = preciosSeis[3]    
+                              } 
+                            }
+                          }
+                          else if(seguro.Clase ==="AUTOS DE NEGOCIOS Y TAXIS")
+                          {
+                            if(seguro.Cilindraje < 1500)
+                            {
+                              if(seguro.Edad <= 9)
+                              {
+                                money = preciosTaxis[0]    
+                              }
+                              else
+                              {
+                                money = preciosTaxis[1]    
+                              } 
+                            }
+                            else if(seguro.Cilindraje >= 1500 && seguro.Cilindraje <= 2500)
+                            {
+                              if(seguro.Edad <= 9)
+                              {
+                                money = preciosTaxis[2]    
+                              }
+                              else
+                              {
+                                money = preciosTaxis[3]    
+                              } 
+                            }
+                            else
+                            {
+                              if(seguro.Edad <= 9)
+                              {
+                                money = preciosTaxis[4]    
+                              }
+                              else
+                              {
+                                money = preciosTaxis[5]    
+                              } 
+                            }
+                            
+                          }
+                           else if(seguro.Clase ==="BUSES Y BUSETAS DE SERVICIO PUBLICO URBANO")
+                          {
+                            money = "942.550"
+                          }
+                          else if(seguro.Clase ==="SERVICIO PUBLICO INTERMUNICIPAL")
+                          {
+                            if(seguro.Numero_pasajeros <10)
+                            {
+                              money = preciosPublico[0]
+                            }
+                            else
+                            {
+                             money = preciosPublico[1] 
+                            }
+                          }
                                                             //console.log(fechafin)
 
                                                             fetch('/seguros/'+seguro.id, {
                                                                 method: 'put',
-                                                                body: JSON.stringify({Fecha_inicio_vigencia:fechainiciocorrecto, Fecha_fin_vigencia:fechafin}),
+                                                                body: JSON.stringify({Fecha_inicio_vigencia:fechainiciocorrecto, Fecha_fin_vigencia:fechafin, Precio:"$"+money}),
                                                                 headers: {
                                                                   'Content-Type': 'application/json',
                                                                   'Accept': 'application/json',
@@ -174,13 +391,20 @@
                                                               }).then(function(response) {
                                                                 return response.json();
                                                               }).then(function(data) {
-                                                                console.log(data);
+                                                                //console.log(data);
+                                                                      if(refresh === 0)
+                                                                    {
+                                                                      refresh = 1
+                                                                      window.location.reload()
+                                                                    }
                                                               }) 
+
+                                                              
 
                                                           }
                                                         })
                                                       })
-                                window.location.reload()
+                                
 
                                 }
                                 else
@@ -246,11 +470,222 @@
                                                             anioCorrecto = numanio+1
                                                             //console.log(anioCorrecto)
                                                             fechafin = anioCorrecto + "-"+fechainicio.split("-")[1]+"-"+fechainicio.split("-")[2]
+
+                                                            
+                                                            
+
+ money =""
+
+                          if(seguro.Clase ==="MOTO")
+                          {
+                            if(seguro.Cilindraje < 100)
+                            {
+                              money = preciosMotos[0]  
+                            }
+                            else if(seguro.Cilindraje >= 100 && seguro.Cilindraje <= 200)
+                            {
+                              money = preciosMotos[1]  
+                            }
+                            else
+                            {
+                              money = preciosMotos[2]  
+                            }
+                            
+                          }
+                          else if(seguro.Clase ==="CAMPEROS Y CAMIONETAS")
+                          {
+                           if(seguro.Cilindraje < 1500)
+                            {
+                              if(seguro.Edad <= 9)
+                              {
+                                money = preciosCamperos[0]    
+                              }
+                              else
+                              {
+                                money = preciosCamperos[1]    
+                              }
+                              
+                            }
+                            else if(seguro.Cilindraje >= 1500 &&seguro.Cilindraje <= 2000)
+                            {
+                              if(seguro.Edad <= 9)
+                              {
+                                money = preciosCamperos[2]    
+                              }
+                              else
+                              {
+                                money = preciosCamperos[3]    
+                              }
+                            }
+                            else
+                            {
+
+                              if(seguro.Edad <= 9)
+                              {
+                                money = preciosCamperos[4]    
+                              }
+                              else
+                              {
+                                money = preciosCamperos[5]    
+                              }
+                            }
+                          }
+                          else if(seguro.Clase ==="CARGA O MIXTO")
+                          {
+                            if(seguro.Toneladas < 5)
+                            {
+                              money = preciosCarga[0]
+                            }
+                            else if(seguro.Toneladas >= 5 && seguro.Toneladas <= 15)
+                            {
+                              money = preciosCarga[1]
+                            }
+                            else
+                            {
+                              money = preciosCarga[2]
+                            }
+                          }
+                          else if(seguro.Clase ==="OFICIALES ESPECIALES")
+                          {
+                            if(seguro.Cilindraje < 1500)
+                            {
+                              money = preciosOficiales[0]  
+                            }
+                            else if(seguro.Cilindraje >= 1500 && seguro.Cilindraje <= 2500)
+                            {
+                              money = preciosOficiales[1]  
+                            }
+                            else
+                            {
+                              money = preciosOficiales[2]  
+                            }
+                            
+                          }
+                          else if(seguro.Clase ==="AUTOS FAMILIARES")
+                          {
+                            if(seguro.Cilindraje < 1500)
+                            {
+                              if(seguro.Edad <= 9)
+                              {
+                                money = preciosFamiliares[0]    
+                              }
+                              else
+                              {
+                                money = preciosFamiliares[1]    
+                              } 
+                            }
+                            else if(seguro.Cilindraje >= 1500 && seguro.Cilindraje <= 2500)
+                            {
+                              if(seguro.Edad <= 9)
+                              {
+                                money = preciosFamiliares[2]    
+                              }
+                              else
+                              {
+                                money = preciosFamiliares[3]    
+                              } 
+                            }
+                            else
+                            {
+                              if(seguro.Edad <= 9)
+                              {
+                                money = preciosFamiliares[4]    
+                              }
+                              else
+                              {
+                                money = preciosFamiliares[5]    
+                              } 
+                            }
+                            
+                          }
+                          else if(seguro.Clase ==="VEHICULOS PARA SEIS O MAS PASAJEROS")
+                          {
+
+                            if(seguro.Cilindraje < 2500)
+                            {
+                              if(seguro.Edad <= 9)
+                              {
+                                money = preciosSeis[0]    
+                              }
+                              else
+                              {
+                                money = preciosSeis[1]    
+                              } 
+                            }
+                            else
+                            {
+                              if(seguro.Edad <= 9)
+                              {
+                                money = preciosSeis[2]    
+                              }
+                              else
+                              {
+                                money = preciosSeis[3]    
+                              } 
+                            }
+                          }
+                          else if(seguro.Clase ==="AUTOS DE NEGOCIOS Y TAXIS")
+                          {
+                            if(seguro.Cilindraje < 1500)
+                            {
+                              if(seguro.Edad <= 9)
+                              {
+                                money = preciosTaxis[0]    
+                              }
+                              else
+                              {
+                                money = preciosTaxis[1]    
+                              } 
+                            }
+                            else if(seguro.Cilindraje >= 1500 && seguro.Cilindraje <= 2500)
+                            {
+                              if(seguro.Edad <= 9)
+                              {
+                                money = preciosTaxis[2]    
+                              }
+                              else
+                              {
+                                money = preciosTaxis[3]    
+                              } 
+                            }
+                            else
+                            {
+                              if(seguro.Edad <= 9)
+                              {
+                                money = preciosTaxis[4]    
+                              }
+                              else
+                              {
+                                money = preciosTaxis[5]    
+                              } 
+                            }
+                            
+                          }
+                           else if(seguro.Clase ==="BUSES Y BUSETAS DE SERVICIO PUBLICO URBANO")
+                          {
+                            money = "942.550"
+                          }
+                          else if(seguro.Clase ==="SERVICIO PUBLICO INTERMUNICIPAL")
+                          {
+                            if(seguro.Numero_pasajeros <10)
+                            {
+                              money = preciosPublico[0]
+                            }
+                            else
+                            {
+                             money = preciosPublico[1] 
+                            }
+                          }
+
+
+
+
+
                                                             //console.log(fechafin)
 
                                                             fetch('/seguros/'+seguro.id, {
                                                                 method: 'put',
-                                                                body: JSON.stringify({Fecha_inicio_vigencia:seguro.created_at.split("T")[0], Fecha_fin_vigencia:fechafin}),
+                                                                body: JSON.stringify({Fecha_inicio_vigencia:seguro.created_at.split("T")[0], Fecha_fin_vigencia:fechafin, Precio:"$"+money}),
                                                                 headers: {
                                                                   'Content-Type': 'application/json',
                                                                   'Accept': 'application/json',
@@ -260,8 +695,16 @@
                                                               }).then(function(response) {
                                                                 return response.json();
                                                               }).then(function(data) {
-                                                                console.log(data);
-                                                              }) 
+                                                                //console.log(data);
+
+                                                              })
+
+                                                              if(refresh2 === 0)
+                                                              {
+                                                                refresh2 = 1
+                                                                window.location.reload()
+                                                              }
+
 
                                                           }   
 
@@ -294,7 +737,7 @@
 
                                                 })  
 
-                                window.location.reload()
+                                
                                 }
                                 
 
