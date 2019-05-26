@@ -819,29 +819,29 @@
                                                             }).then(function(data) {
                                                               //console.log(compra.Nombre_titular);
 
-fi = document.getElementById("fechaini").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
-placa = document.getElementById("placa").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
-                                                              ff = document.getElementById("fechafin").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
-    np = document.getElementById("numPas").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
-    c = document.getElementById("cilin").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
-    cl = document.getElementById("clase").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
-    t = document.getElementById("ton").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
-    e = document.getElementById("edad").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
-    p = document.getElementById("precio").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+                                                        fi = document.getElementById("fechaini").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+                                                        placa = document.getElementById("placa").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+                                                                                                                      ff = document.getElementById("fechafin").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+                                                            np = document.getElementById("numPas").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+                                                            c = document.getElementById("cilin").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+                                                            cl = document.getElementById("clase").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+                                                            t = document.getElementById("ton").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+                                                            e = document.getElementById("edad").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+                                                            p = document.getElementById("precio").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
 
-    var doc = new jsPDF()
-    
+                                                            var doc = new jsPDF()
+                                                            
 
-    doc.text(20, 25, "Resumen del pago de su SOAT")
+                                                            doc.text(20, 25, "Resumen del pago de su SOAT")
 
-    doc.text(20, 40, "")
-    doc.text(20, 50, "Placa del vehículo: "+placa)
-    
-    doc.text(20, 60, "Número de pasajeros del vehículo: " + np)
-    doc.text(20, 70, "Cilindraje del vehículo: " + c)
-    doc.text(20, 80, "Clase del vehículo: " + cl)
-    doc.text(20, 90, "Toneladas del vehículo: " + t)
-    doc.text(20, 100, "Edad del vehículo: " + e)
+                                                            doc.text(20, 40, "")
+                                                            doc.text(20, 50, "Placa del vehículo: "+placa)
+                                                            
+                                                            doc.text(20, 60, "Número de pasajeros del vehículo: " + np)
+                                                            doc.text(20, 70, "Cilindraje del vehículo: " + c)
+                                                            doc.text(20, 80, "Clase del vehículo: " + cl)
+                                                            doc.text(20, 90, "Toneladas del vehículo: " + t)
+                                                            doc.text(20, 100, "Edad del vehículo: " + e)
 
                                                               doc.text(20, 110, "Número de la tarjeta: " + compra.Numero_tarjeta)
                                                               doc.text(20, 120, "Nombre del titular: " + compra.Nombre_titular)
