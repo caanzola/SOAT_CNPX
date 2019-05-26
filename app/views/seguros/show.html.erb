@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<h4> Datos del seguro: </h4>
 <div id = "placa">
  
  <p>
@@ -62,7 +63,20 @@
 </p>
 </div>
 
+<div id = "usuario">
+  </div>
+
+<div id = "compra">
+  <h4> Datos de la transacción: </h4>
+  Cargando...
+  </div>
+
 <script>
+
+
+
+
+
 
   cuantos = 0
   refresh = 0
@@ -417,22 +431,7 @@
                                 else
                                 {
 
-                                              fetch('/compras.json', {
-                                                      method: 'get',
-                                                      headers: {
-                                                        'Content-Type': 'application/json',
-                                                        'X-CSRF-Token': Rails.csrfToken()
-                                                      },
-                                                      credentials: 'same-origin'
-                                                    }).then(response => {
-                                                      return response.json()
-                                                })
-                                                .then(data => {
-                                                  // Work with JSON data here
-                                                  
-                                                  //console.log(data);
-                                                  
-                                                  data.forEach((compra) => {
+                                              
                                                     
 
                                                     fetch('/seguros.json', {
@@ -465,6 +464,7 @@
 
                                                           if(plac === seguro.Placa_del_vehiculo)
                                                           {
+                                                            
 
                                                             //console.log(seguro.created_at.split("T"))
 
@@ -684,6 +684,8 @@
                             }
                           }
 
+                                                              
+
 
 
 
@@ -704,6 +706,8 @@
                                                               }).then(function(data) {
                                                                 //console.log(data);
 
+
+
                                                               })
 
                                                               if(refresh2 === 0)
@@ -718,29 +722,15 @@
 
                                                       
 
-                                                           fetch('/compras/'+compra.id, {
-                                                              method: 'put',
-                                                              body: JSON.stringify({id_seguro:seguro.id}),
-                                                              headers: {
-                                                                'Content-Type': 'application/json',
-                                                                'Accept': 'application/json',
-                                                                'X-CSRF-Token': Rails.csrfToken()
-                                                              },
-                                                              credentials: 'same-origin'
-                                                            }).then(function(response) {
-                                                              return response.json();
-                                                            }).then(function(data) {
-                                                              console.log(data);
-
-                                                            })      
+                                                                 
 
                                                       
                                                     
                                                     
                                                       })
-                                                    })  
+                                                     
     
-                                                  })
+                                                  
 
                                                 })  
 
@@ -757,10 +747,81 @@
 
 
 
-    placa = document.getElementById("placa").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+    
 
     fi = document.getElementById("fechaini").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
-    ff = document.getElementById("fechafin").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+    
+
+
+    if(fi !== "")
+    {
+
+                                            fetch('/compras.json', {
+                                                      method: 'get',
+                                                      headers: {
+                                                        'Content-Type': 'application/json',
+                                                        'X-CSRF-Token': Rails.csrfToken()
+                                                      },
+                                                      credentials: 'same-origin'
+                                                    }).then(response => {
+                                                      return response.json()
+                                                })
+                                                .then(data => {
+                                                  // Work with JSON data here
+                                                  
+                                                  //console.log(data);
+                                                  
+                                                  data.forEach((compra) => {
+                                                    
+
+                                                    fetch('/seguros.json', {
+                                                      method: 'get',
+                                                      headers: {
+                                                        'Content-Type': 'application/json',
+                                                        'X-CSRF-Token': Rails.csrfToken()
+                                                      },
+                                                      credentials: 'same-origin'
+                                                    }).then(response => {
+                                                      return response.json()
+                                                    })
+                                                    .then(data => {
+                                                      // Work with JSON data here
+                                                      
+                                                      //console.log(data);
+                                                      
+                                                      data.forEach((seguro) => {
+                                                    
+
+                                                    plac = document.getElementById("placa").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+
+                                                    fi = document.getElementById("fechaini").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+
+
+                                                          if(compra.Placa_asociada === seguro.Placa_del_vehiculo && plac === seguro.Placa_del_vehiculo)
+                                                          {
+                                                            console.log("Encontre")
+                                                            console.log(seguro.id)
+                                                            console.log(compra.id)
+
+
+
+                                                            fetch('/compras/'+compra.id, {
+                                                              method: 'put',
+                                                              body: JSON.stringify({id_seguro:seguro.id}),
+                                                              headers: {
+                                                                'Content-Type': 'application/json',
+                                                                'Accept': 'application/json',
+                                                                'X-CSRF-Token': Rails.csrfToken()
+                                                              },
+                                                              credentials: 'same-origin'
+                                                            }).then(function(response) {
+                                                              return response.json();
+                                                            }).then(function(data) {
+                                                              //console.log(compra.Nombre_titular);
+
+fi = document.getElementById("fechaini").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+placa = document.getElementById("placa").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
+                                                              ff = document.getElementById("fechafin").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
     np = document.getElementById("numPas").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
     c = document.getElementById("cilin").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
     cl = document.getElementById("clase").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
@@ -768,25 +829,44 @@
     e = document.getElementById("edad").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
     p = document.getElementById("precio").getElementsByTagName("p")[0].innerText.split(":")[1].trim()
 
-  var doc = new jsPDF()
+    var doc = new jsPDF()
     
 
     doc.text(20, 25, "Resumen del pago de su SOAT")
 
     doc.text(20, 40, "")
     doc.text(20, 50, "Placa del vehículo: "+placa)
-    doc.text(20, 60, "Fecha de inicio de vigencia: " + fi)
     
-    doc.text(20, 70, "Fecha de vencimiento de vigencia: " + ff)
-    doc.text(20, 80, "Número de pasajeros: " + np)
-    doc.text(20, 90, "Cilindraje: " + c)
-    doc.text(20, 100, "Clase: " + cl)
-    doc.text(20, 110, "Toneladas: " + t)
-    doc.text(20, 120, "Edad: " + e)
-    doc.text(20, 150, "Precio: " + p)
-    doc.save('Test.pdf')
+    doc.text(20, 60, "Número de pasajeros del vehículo: " + np)
+    doc.text(20, 70, "Cilindraje del vehículo: " + c)
+    doc.text(20, 80, "Clase del vehículo: " + cl)
+    doc.text(20, 90, "Toneladas del vehículo: " + t)
+    doc.text(20, 100, "Edad del vehículo: " + e)
+
+                                                              doc.text(20, 110, "Número de la tarjeta: " + compra.Numero_tarjeta)
+                                                              doc.text(20, 120, "Nombre del titular: " + compra.Nombre_titular)
+                                                              doc.text(20, 130, "Número de cuotas: " + compra.Numero_cuotas)
+                                                              doc.text(20, 150, "Fecha de inicio de vigencia: " + fi)
+                                                              
+                                                              doc.text(20, 160, "Fecha de vencimiento de vigencia: " + ff)
+                                                              doc.text(20, 190, "Precio: " + p)
+                                                              doc.save('Registro de compra.pdf')
+                                                              document.getElementById("compra").innerHTML = "<div> <h4> Datos de la transacción: </h4> <strong>Número de la tarjeta:</strong> "+compra.Numero_tarjeta+"<br><strong>Nombre del  titular:</strong> "+compra.Nombre_titular+"<br><strong>Número de cuotas:</strong> "+compra.Numero_cuotas+"</div>"
+                                                              
+
+                                                            })
+                                                          }
 
 
+                                                       })
+                                                    })
+                                                }) 
+                                            }) 
+       
+    }
+
+  
+  
 
 
 
