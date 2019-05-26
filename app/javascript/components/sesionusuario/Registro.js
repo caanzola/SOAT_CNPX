@@ -85,7 +85,7 @@ listo(){
 
        fetch('/users', {
         method: 'post',
-        body: JSON.stringify({username: nombre, password: clave, email:correo, rol:this.state.tipo}),
+        body: JSON.stringify({username: nombre, password: clave, email:correo, rol:this.state.tipo, sesionactiva:"si"}),
         headers: {
           'Content-Type': 'application/json',
           'X-CSRF-Token': Rails.csrfToken()
@@ -139,23 +139,12 @@ listo(){
 
                       if(user1.id === user.id)
                       {
-                          fetch('/users/'+user1.id, {
-                            method: 'put',
-                            body: JSON.stringify({sesionactiva:"si"}),
-                            headers: {
-                              'Content-Type': 'application/json',
-                              'Accept': 'application/json',
-                              'X-CSRF-Token': Rails.csrfToken()
-                            },
-                            credentials: 'same-origin'
-                          }).then(function(response) {
-                            return response.json();
-                          }).then(function(data) {
-                            console.log(data);
-                          })
+                          
                       }
                       else
                       {
+
+                        console.log("Ahora no")
                             fetch('/users/'+user1.id, {
                             method: 'put',
                             body: JSON.stringify({sesionactiva:"no"}),
