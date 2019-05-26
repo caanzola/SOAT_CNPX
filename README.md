@@ -30,5 +30,19 @@ Por otro lado, un usuario administrador puede ver una lista con todas las solici
 
 ### API RESTFul
 
-Los servicios estan expuestos a través de una API RESTFul que puede ser probada con herramientas como Postman
+Los servicios estan expuestos a través de una API RESTFul que puede ser probada con herramientas como Postman o desde el browser directamente. Los recursos disponibles son:
+
+- Seguros
+- Usuarios
+- Compras
+
+Para acceder a los recursos en formato json es necesario escribir la url con ".json" al final.
+Para acceder al detalle de uno de los recursos se debe escribir el id del recurso seguido del tipo de recurso, pro ejemplo: "https://soatcnpx.herokuapp.com/seguros/9.json" permite ver el detalle del seguro con id 9.
+
+Ejemplos de consultas:
+
+![](https://github.com/caanzola/DalgoProyect/blob/master/Captura%20de%20Pantalla%202019-05-26%20a%20la(s)%206.23.18%20p.%20m..png?raw=true)
+![](https://github.com/caanzola/DalgoProyect/blob/master/Captura%20de%20Pantalla%202019-05-26%20a%20la(s)%206.24.37%20p.%20m..png?raw=true)
+![](https://github.com/caanzola/DalgoProyect/blob/master/Captura%20de%20Pantalla%202019-05-26%20a%20la(s)%206.27.52%20p.%20m..png?raw=true)
+
 
